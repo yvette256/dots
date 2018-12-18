@@ -1,13 +1,7 @@
-;-------------------------------------------------
-;                                                ;
-;           Polybar config for my themes         ;
-; 				                 ;
-;                                                ;
-;-------------------------------------------------
-
+; Polybar config
 
 [colors]
-;My colors are set from .Xresources to match everything else
+;I should set colors from .Xresources
 my_background 	= #2b2b2b
 my_foreground 	= #e7e7e7
 my_color0	= ${xrdb:color0}
@@ -231,7 +225,7 @@ label-disconnected =  NONE
 label-disconnected-foreground = ${colors.my_foreground}
 
 [module/volume]
-type = internal/alsa
+type = internal/pulseaudio
 
 format-volume =  <label-volume>
 format-volume-padding = 1
