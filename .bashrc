@@ -5,19 +5,15 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-# Add to path
+# Add my bin to path
 export PATH="$PATH:/home/yvette/bin"
 
-# Set aliases
+# Set my aliases
 alias ls='ls --color=auto'
 alias scrots='scrot ~/Pictures/Screenshots/%F-%H%M%S_scrot.png'
 alias dots='git --git-dir=$HOME/.dots.git/ --work-tree=$HOME'
 
-# Make prompt pretty 
-PS1='[\u@\h \W]\$ '
-export PS1="\[\033[38;5;87m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\] > \[$(tput sgr0)\]\[\033[38;5;13m\]\w\[$(tput sgr0)\]\[\033[38;5;15m\] > \[$(tput sgr0)\]"
-
-# Powerline
+# Set powerline shell prompt
 function _update_ps1() {
     PS1=$(powerline-shell $?)
 }
@@ -31,6 +27,6 @@ fi
 # ( ) # Hide shell job control messages.
 (cat ~/.cache/wal/sequences &)
 
-# To add support for TTYs this line can be optionally added.
+# Add support for TTYs
 source ~/.cache/wal/colors-tty.sh
 
