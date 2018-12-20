@@ -55,7 +55,7 @@ font-3 = DejaVu Sans:style=Bold:size=11;1
 
 modules-left = i3 xwindow
 modules-center = date 
-modules-right = keyboard wireless-network battery
+modules-right = keyboard volume wireless-network battery
 
 tray-position = 
 tray-padding = 9
