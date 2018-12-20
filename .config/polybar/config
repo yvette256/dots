@@ -1,18 +1,18 @@
 ; Polybar config
 
 [colors]
-;I should set colors from .Xresources
-my_background 	= #2b2b2b
-my_foreground 	= #e7e7e7
+; Colors set from .Xresources
+my_background 	= ${xrdb:background}
+my_foreground 	= ${xrdb:foreground}
 my_color0	= ${xrdb:color0}
 my_color1	= ${xrdb:color1}
-my_color2	= #75404b
+my_color2	= ${xrdb:color2}
 my_color3	= ${xrdb:color3}
-my_color4	= #56694d
-my_color5	= #4c584a
+my_color4	= ${xrdb:color4}
+my_color5	= ${xrdb:color5}
 my_color6	= ${xrdb:color6}
 my_color7	= ${xrdb:color7}
-my_color8	= #5d6160
+my_color8	= ${xrdb:color8}
 my_color9	= ${xrdb:color9}
 my_color10	= ${xrdb:color10}
 my_color11	= ${xrdb:color11}
