@@ -74,10 +74,10 @@ dots ls-files
 dots ls-files .config/polybar/
 
 # README.md is annoying
-dots update-index --assume-unchanged LICENSE.md
+dots update-index --assume-unchanged README.md
 
 # To undo
-dots update-index --no-assume-unchanged LICENSE.md 
+dots update-index --no-assume-unchanged README.md 
 
 ~~~
 
