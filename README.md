@@ -72,6 +72,13 @@ dots status -u .config/
 # Listing files (tracked by git)
 dots ls-files
 dots ls-files .config/polybar/
+
+# README.md is annoying
+dots update-index --assume-unchanged LICENSE.md
+
+# To undo
+dots update-index --no-assume-unchanged LICENSE.md 
+
 ~~~
 
 #### Replication
