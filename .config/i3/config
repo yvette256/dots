@@ -209,7 +209,7 @@ bindsym $mod+Return exec termite
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # Start compton
-exec --no-startup-id compton &
+exec --no-startup-id compton -b
 
 # Set colors from resource
 set_from_resource	$background	background
