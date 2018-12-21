@@ -231,7 +231,7 @@ format-volume =  <label-volume>
 format-volume-padding = 1
 format-volume-underline = ${colors.my_color2}
 
-format-muted = <label-muted>
+format-muted =  <label-muted>
 format-muted-padding = ${self.format-volume-padding}
 format-muted-underline = ${self.format-volume-underline}
 
