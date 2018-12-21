@@ -1,7 +1,7 @@
 ; Polybar config
 
 [colors]
-; Colors set from .Xresources
+; Colors set from X resource file (such as .Xresources)
 my_background 	= ${xrdb:background}
 my_foreground 	= ${xrdb:foreground}
 my_color0	= ${xrdb:color0}
