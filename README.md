@@ -73,11 +73,8 @@ dots status -u .config/
 dots ls-files
 dots ls-files .config/polybar/
 
-# So that README.md doesn't have to be kept in home directory
-dots update-index --assume-unchanged README.md
-
-# To undo
-dots update-index --no-assume-unchanged README.md 
+# Adding README.md for commit
+dots-update-README path/to/README.md
 
 ~~~
 
