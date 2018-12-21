@@ -73,7 +73,7 @@ dots status -u .config/
 dots ls-files
 dots ls-files .config/polybar/
 
-# README.md is annoying
+# So that README.md doesn't have to be kept in home directory
 dots update-index --assume-unchanged README.md
 
 # To undo
