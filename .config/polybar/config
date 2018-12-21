@@ -152,7 +152,7 @@ format-discharging-padding = 1
 format-discharging-underline = ${self.format-charging-underline}
 
 format-full-prefix-foreground = ${colors.my_background}
-format-full = "  <label-full>"
+format-full = " <label-full>"
 format-full-padding = ${self.format-discharging-padding}
 format-full-underline = ${self.format-charging-underline}
 
@@ -214,14 +214,14 @@ format-connected = " <label-connected>"
 format-connected-padding = 1
 format-connected-underline = ${colors.my_color2}
 
-format-disconnected = "<label-disconnected>"
+format-disconnected = " <label-disconnected>"
 format-disconnected-padding = ${self.format-connected-padding}
 format-disconnected-underline = ${self.format-connected-underline}
 
 label-connected = %essid% (%signal%%)
 label-connected-foreground = ${colors.my_foreground}
 
-label-disconnected =  NONE
+label-disconnected = NONE
 label-disconnected-foreground = ${colors.my_foreground}
 
 [module/volume]
@@ -231,11 +231,11 @@ format-volume =  <label-volume>
 format-volume-padding = 1
 format-volume-underline = ${colors.my_color2}
 
-format-muted = <label-muted>
+format-muted = <label-muted>
 format-muted-padding = ${self.format-volume-padding}
 format-muted-underline = ${self.format-volume-underline}
 
-label-muted =  MUTE
+label-muted = MUTE
 label-muted-foreground = ${colors.my_foreground}
 
 ; vim:ft=dosini
