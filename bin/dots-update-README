@@ -1,0 +1,41 @@
+#!/bin/bash
+
+# Script that commits changes to README.md without needing README.md in home directory.
+# Useful command: dots ls-files -v|grep '^h' (lists ingored files)
+
+readme="$1"
+
+dots() {
+    git --git-dir=$HOME/.dots.git/ --work-tree=$HOME "$@"
+}
+
+update() {
+    cp $readme $HOME
+    printf "README.md copied to home directory.\n"
+
+    dots update-index --no-assume-unchanged $HOME/README.md
+    printf "README.md unignored.\n"
+
+    dots add $HOME/README.md
+    printf "README.md added.\n"
+
+    dots update-index --assume-unchanged $HOME/README.md
+    printf "README.md ignored once more.\n"
+
+    dots commit -m "Updated README.md"
+    printf "README.md committed (if there were changes).\n"
+
+    rm $HOME/README.md
+    printf "README.md removed from home directory.\n"
+}
+
+usage() {
+    printf "usage: dots-update-README <path/to/dots/README.md>\n"
+    exit "1"
+}
+
+if [[ -f $readme && ($readme == */README.md || $readme == README.md) ]] ; then
+    update
+else
+    usage
+fi
