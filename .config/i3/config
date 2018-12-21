@@ -188,6 +188,9 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # Start compton
 exec --no-startup-id compton -b
 
+# Run dunst with color theme
+exec --no-startup-id wal-set
+
 # Disable titlebars
 for_window [class="^.*"] border pixel 3
 
