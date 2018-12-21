@@ -1,6 +1,7 @@
 #!/bin/bash
 
-# Script that commits changes to README.md without needing README.md in home directory.
+# Script that adds changes to README.md without needing README.md in home directory.
+# You can then commit the changes and push.
 # Useful command: dots ls-files -v|grep '^h' (lists ingored files)
 
 readme="$1"
@@ -21,9 +22,6 @@ update() {
 
     dots update-index --assume-unchanged $HOME/README.md
     printf "README.md ignored once more.\n"
-
-    dots commit -m "Updated README.md"
-    printf "README.md committed (if there were changes).\n"
 
     rm $HOME/README.md
     printf "README.md removed from home directory.\n"
