@@ -23,7 +23,7 @@ Use `wal -ig path/to/image` to generate and apply colorscheme.
 - [imagemagick](https://github.com/ImageMagick/ImageMagick) for pywal.
 - [gnupg](https://www.archlinux.org/packages/core/x86_64/gnupg/) for network.
 - [FontAwesome](https://aur.archlinux.org/packages/ttf-font-awesome/), [Inconsolata](https://www.archlinux.org/packages/community/any/ttf-inconsolata/), [DejaVu](https://www.archlinux.org/packages/extra/any/ttf-dejavu/), fonts.
-- [light](https://github.com/haikarainen/light), to control backlight when xbacklight doesn't work.
+- [light](https://github.com/haikarainen/light), to control backlight when `xbacklight` doesn't work.
 - [compton](https://github.com/chjj/compton), for compositing.
 - [powerline-shell](https://github.com/b-ryan/powerline-shell), for shell prompt.
 - [oomox](https://github.com/themix-project/oomox), for pywal gtk theme.
