@@ -17,13 +17,12 @@ Use `wal -ig path/to/image` to generate and apply colorscheme.
 - Color theme generation: [pywal](https://github.com/dylanaraps/pywal)  
 
 ### Dependencies:
-- [pulseaudio](https://www.archlinux.org/packages/?name=pulseaudio), for volume control in general.
-- [NetworkManager](https://www.archlinux.org/packages/extra/x86_64/networkmanager/) and [nm-applet](https://www.archlinux.org/packages/extra/x86_64/network-manager-applet/), for network stuff.
-- [gotop](https://github.com/cjbassi/gotop), system monitoring with vim binds.
-- [xclip](https://github.com/astrand/xclip) for copying url to clipboard with imgur script.
+- [pulseaudio](https://www.archlinux.org/packages/?name=pulseaudio), for volume control.
+- [NetworkManager](https://www.archlinux.org/packages/extra/x86_64/networkmanager/) and [nm-applet](https://www.archlinux.org/packages/extra/x86_64/network-manager-applet/), for network.
+- [xclip](https://github.com/astrand/xclip) for copying to clipboard.
 - [imagemagick](https://github.com/ImageMagick/ImageMagick) for pywal.
-- [gnupg](https://www.archlinux.org/packages/core/x86_64/gnupg/) for netowrk stuff also.
-- [FontAwesome](https://aur.archlinux.org/packages/ttf-font-awesome/); [Inconsolata](https://www.archlinux.org/packages/community/any/ttf-inconsolata/); [DejaVu](https://www.archlinux.org/packages/extra/any/ttf-dejavu/); necessary fonts.
+- [gnupg](https://www.archlinux.org/packages/core/x86_64/gnupg/) for network.
+- [FontAwesome](https://aur.archlinux.org/packages/ttf-font-awesome/), [Inconsolata](https://www.archlinux.org/packages/community/any/ttf-inconsolata/), [DejaVu](https://www.archlinux.org/packages/extra/any/ttf-dejavu/), fonts.
 - [light](https://github.com/haikarainen/light), to control backlight when xbacklight doesn't work.
 - [compton](https://github.com/chjj/compton), for compositing.
 - [powerline-shell](https://github.com/b-ryan/powerline-shell), for shell prompt.
@@ -33,8 +32,6 @@ Use `wal -ig path/to/image` to generate and apply colorscheme.
 ## Managing Dotfiles
 
 All credit for this below method goes to [jaagr](https://github.com/jaagr/dots), below is a slightly modified version of their writeup. This method only requires git, and the files will be kept at their intended location, without the need for symlinks.
-
-Files are added to the repository by calling `dots add $HOME/.config/file`.
 
 #### Alias
 ~~~ sh
@@ -64,6 +61,9 @@ dots add --update ...
 dots commit -m "..."
 dots push
 
+# Adding file to repository
+dots add $HOME/.config/file
+
 # Listing files (not tracked by git)
 dots untracked
 dots untracked-at $HOME/path/to/foo/bar
@@ -72,10 +72,6 @@ dots status -u .config/
 # Listing files (tracked by git)
 dots ls-files
 dots ls-files .config/polybar/
-
-# Adding README.md for commit
-dots-update-README path/to/README.md
-
 ~~~
 
 #### Replication
