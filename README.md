@@ -2,7 +2,7 @@
 
 ## Setup (Arch Linux)
 
-Use `wal -ig path/to/image.png` to generate and apply colorscheme.  
+Use `wal -ig path/to/image.png && wal-set` to generate and apply colorscheme.  
 
 ### Primary:
 - Shell: [bash](https://www.gnu.org/software/bash/)
@@ -27,7 +27,8 @@ Use `wal -ig path/to/image.png` to generate and apply colorscheme.
 - [compton](https://github.com/chjj/compton), for compositing.
 - [powerline-shell](https://github.com/b-ryan/powerline-shell), for shell prompt.
 - [oomox](https://github.com/themix-project/oomox), for pywal gtk theme.
-- [xorg-xrdb](https://www.archlinux.org/packages/extra/x86_64/xorg-xrdb/) for resources.
+- [xorg-xrdb](https://www.archlinux.org/packages/extra/x86_64/xorg-xrdb/), for resources.
+- [xorg-xinput](https://www.archlinux.org/packages/extra/x86_64/xorg-xinput/), for configuring input devices (such as touchpad). 
 
 ## Managing Dotfiles
 
@@ -80,4 +81,5 @@ git clone --recursive --separate-git-dir=$HOME/.dots.git https://github.com/hell
 rsync -rvl --exclude ".git" /tmp/dots/ $HOME/
 rm -r /tmp/dots
 dots submodule update --init --recursive $HOME/
-~~~
+~~
+~
