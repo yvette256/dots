@@ -1,2 +1,47 @@
 ! ~/.Xresources
 
+
+*background:            #272827
+*foreground:            #657b83
+*fading:                15
+*fadeColor:             black
+*cursorColor:           #16A085
+*pointerColorBackground:#2B2C2B
+*pointerColorForeground:#16A085
+
+! special
+*.foreground:   #bfbfbf
+*.background:   #162025
+*.cursorColor:  #bfbfbf
+
+! black
+*.color0:       #0f1619
+*.color8:       #5d6160
+
+! red
+*.color1:       #393843
+*.color9:       #662b37
+
+! green
+*.color2:       #75404b
+*.color10:      #39402e
+
+! yellow
+*.color3:       #39402e
+*.color11:      #393843
+
+! blue
+*.color4:       #56694d
+*.color12:      #75404b
+
+! magenta
+*.color5:       #4c584a
+*.color13:      #662b37
+
+! cyan
+*.color6:       #662b37
+*.color14:      #4c584a
+
+! white
+*.color7:       #bfbfbf
+*.color15:      #bfbfbf
