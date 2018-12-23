@@ -2,7 +2,7 @@
 
 ## Setup (Arch Linux)
 
-Use `wal -ig path/to/image` to generate and apply colorscheme.  
+Use `wal -ig path/to/image.png` to generate and apply colorscheme.  
 
 ### Primary:
 - Shell: [bash](https://www.gnu.org/software/bash/)
@@ -31,7 +31,7 @@ Use `wal -ig path/to/image` to generate and apply colorscheme.
 
 ## Managing Dotfiles
 
-All credit for this below method goes to [jaagr](https://github.com/jaagr/dots), below is a slightly modified version of their writeup. This method only requires git, and the files will be kept at their intended location, without the need for symlinks.
+Credit for this below method belongs to [jaagr](https://github.com/jaagr/dots), below is a slightly modified version of their writeup. Files will be kept at their intended location, without the need for symlinks.
 
 #### Alias
 ~~~ sh
