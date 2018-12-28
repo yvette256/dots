@@ -12,8 +12,6 @@ Use `wal -ig path/to/image.png && wal-set` to generate and apply colorscheme.
 - Launcher: [dmenu-extended](https://github.com/MarkHedleyJones/dmenu-extended) with [rofi](https://github.com/DaveDavenport/rofi)  
 - Text editor: [vim](https://github.com/vim/vim)
 - Notifications: [dunst](https://github.com/dunst-project/dunst)  
-- File manager: [ranger](https://github.com/ranger/ranger)  
-- Browser: [firefox](https://www.archlinux.org/packages/extra/x86_64/firefox/)  
 - Color theme generation: [pywal](https://github.com/dylanaraps/pywal)  
 
 ### Dependencies:
