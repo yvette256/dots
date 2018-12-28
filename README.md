@@ -18,21 +18,20 @@ Use `wal -ig path/to/image.png && wal-set` to generate and apply colorscheme.
 
 ### Dependencies:
 - [pulseaudio](https://www.archlinux.org/packages/?name=pulseaudio), for volume control.
-- [NetworkManager](https://www.archlinux.org/packages/extra/x86_64/networkmanager/) and [nm-applet](https://www.archlinux.org/packages/extra/x86_64/network-manager-applet/), for network.
-- [xclip](https://github.com/astrand/xclip) for copying to clipboard.
-- [imagemagick](https://github.com/ImageMagick/ImageMagick) for pywal.
-- [gnupg](https://www.archlinux.org/packages/core/x86_64/gnupg/) for network.
-- [FontAwesome](https://aur.archlinux.org/packages/ttf-font-awesome/), [Inconsolata](https://www.archlinux.org/packages/community/any/ttf-inconsolata/), [DejaVu](https://www.archlinux.org/packages/extra/any/ttf-dejavu/), fonts.
+- [NetworkManager](https://www.archlinux.org/packages/extra/x86_64/networkmanager/) and [nm-applet](https://www.archlinux.org/packages/extra/x86_64/network-manager-applet/), for network management.
+- [xclip](https://github.com/astrand/xclip), for copying to clipboard.
+- [imagemagick](https://github.com/ImageMagick/ImageMagick), for pywal.
+- [FontAwesome](https://aur.archlinux.org/packages/ttf-font-awesome/), [Inconsolata](https://www.archlinux.org/packages/community/any/ttf-inconsolata/), [DejaVu](https://www.archlinux.org/packages/extra/any/ttf-dejavu/), for fonts.
 - [light](https://github.com/haikarainen/light), to control backlight when `xbacklight` doesn't work.
 - [compton](https://github.com/chjj/compton), for compositing.
 - [powerline-shell](https://github.com/b-ryan/powerline-shell), for shell prompt.
 - [oomox](https://github.com/themix-project/oomox), for pywal gtk theme.
-- [xorg-xrdb](https://www.archlinux.org/packages/extra/x86_64/xorg-xrdb/), for resources.
+- [xorg-xrdb](https://www.archlinux.org/packages/extra/x86_64/xorg-xrdb/), for setting resources.
 - [xorg-xinput](https://www.archlinux.org/packages/extra/x86_64/xorg-xinput/), for configuring input devices (such as touchpad). 
 
 ## Managing Dotfiles
 
-Credit for this below method belongs to [jaagr](https://github.com/jaagr/dots), below is a slightly modified version of their writeup. Files will be kept at their intended location, without the need for symlinks.
+Credit for this below method belongs to [jaagr](https://github.com/jaagr/dots), below is a slightly modified version of their writeup. Files are kept at their intended location, without the need for symlinks.
 
 #### Alias
 ~~~ sh
