@@ -2,7 +2,7 @@
 
 ## Setup (Arch Linux)
 
-Use `wal -ig path/to/image.png && wal-set` to generate and apply colorscheme.  
+Use `wal -ig path/to/image.png && wal-set` to apply wallpaper and generated colorscheme.  
 
 ### Primary:
 - Shell: [bash](https://www.gnu.org/software/bash/)
