@@ -1,0 +1,44 @@
+#!/bin/sh
+
+# Script that adds changes to a file/directory without needing that file in the home directory.
+#
+# Useful command: dots ls-files -v|grep '^h' (lists ingored files)
+
+# vars
+path="$1"
+name=$(basename -- "$path")
+
+# funcs
+dots() {
+    git --git-dir=$HOME/.dots.git/ --work-tree=$HOME "$@"
+}
+
+update() {
+    cp -R "$path" "$HOME" && \
+    printf "Copied $path to home directory as $name.\n"
+
+    export -f dots
+    dots ls-files "$HOME/$name" -z | xargs -0 bash -c 'dots update-index --no-assume-unchanged "$@"' _ && \
+    printf "Unignored $name.\n"
+
+    dots add "$HOME/$name" && \
+    printf "Added $name.\n"
+
+    dots ls-files "$HOME/$name" -z | xargs -0 bash -c 'dots update-index --assume-unchanged "$@"' _ && \
+    printf "Ingored $name once more.\n"
+
+    rm -R "$HOME/$name" && \
+    printf "Removed $name from home directory.\n"
+}
+
+usage() {
+    printf "usage: dots-update [path/to/file/or/directory]\n"
+    exit "1"
+}
+
+# exec
+if [[ -e "$1" ]] ; then
+    update
+else
+    usage
+fi
