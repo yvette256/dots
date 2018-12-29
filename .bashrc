@@ -6,7 +6,7 @@
 [[ $- != *i* ]] && return
 
 # Add my bin to path
-export PATH="$PATH:/home/yvette/bin"
+export PATH="$PATH:/home/yvette/bin:/home/yvette/.gem/ruby/2.5.0/bin"
 
 # Set my aliases
 alias ls='ls --color=auto'
