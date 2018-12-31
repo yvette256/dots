@@ -57,7 +57,8 @@
         "xlsx",
         "md",
         "html",
-        "sublime-project"
+        "sublime-project",
+        "mp4"
     ],
     "watch_folders": [
         "~/"
