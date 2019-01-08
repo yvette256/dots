@@ -48,9 +48,9 @@ padding-right = 0
 module-margin-left = 2
 module-margin-right = 0
 
-font-2 = FontAwesome:fontformat=truetype:size=9;1
-font-0 = Inconsolata:fontformat=truetype:size=11;1
-font-1 = Inconsolata:fontformat=truetype:size=11;1
+font-1 = Font Awesome 5 Free:style=Regular:size=9;1
+font-2 = Font Awesome 5 Free:style=Solid:size=9;1
+font-0 = Inconsolata:size=11;1
 font-3 = DejaVu Sans:style=Bold:size=11;1
 
 modules-left = i3 xwindow
@@ -82,8 +82,10 @@ label-mode-padding = 1
 label-mode-background = ${colors.my_color4}
 
 label-focused = %name%
-label-focused-foreground = ${colors.my_foreground}
-label-focused-background = ${colors.my_background}
+;label-focused-foreground = ${colors.my_foreground}
+label-focused-foreground = ${colors.my_background}
+;label-focused-background = ${colors.my_background}
+label-focused-background = ${colors.my_color4}
 label-focused-underline = ${colors.my_color4}
 label-focused-padding = 1
 
@@ -100,16 +102,6 @@ label-urgent-background = ${colors.my_background}
 label-urgent-underline = ${colors.my_color2}
 label-urgent-padding = 1
 
-[module/musicinfo]
-type = custom/script
-
-exec = ~/.config/polybar/music.sh
-interval = 5
-format = <label>
-label = %output:0:30:...%
-format-padding = 10
-format-foreground = ${colors.my_color2}
-
 [module/date]
 type = internal/date
 interval = 1
@@ -118,16 +110,14 @@ date =
 date-alt = "%d/%m/%Y"
 
 time = "%a %b %d, %I:%M:%S %p "
-
 time-alt = %H:%M
 
 format-prefix-foreground = ${colors.my_foreground}
 format-underline = ${colors.my_color4}
-;format-underline =
-
 
 label = %date% %time%
-
+label-background = ${colors.my_color4}
+label-foreground = ${colors.my_background}
 
 [module/battery]
 type = internal/battery
@@ -231,7 +221,7 @@ format-volume =  <label-volume>
 format-volume-padding = 1
 format-volume-underline = ${colors.my_color2}
 
-format-muted =  <label-muted>
+format-muted =  <label-muted>
 format-muted-padding = ${self.format-volume-padding}
 format-muted-underline = ${self.format-volume-underline}
 
