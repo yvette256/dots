@@ -107,10 +107,10 @@ type = internal/date
 interval = 1
 
 date =
-date-alt = "%d/%m/%Y"
+date-alt =
 
 time = "%a %b %d, %I:%M:%S %p "
-time-alt = %H:%M
+time-alt =
 
 format-prefix-foreground = ${colors.my_foreground}
 format-underline = ${colors.my_color4}
@@ -235,9 +235,9 @@ type = custom/text
 content = ""
 
 content-background = ${colors.my_background}
-content-foreground = ${colors.my_color2}
+content-foreground = ${colors.my_color4}
 content-padding = 1
-content-underline = ${colors.my_color2}
+content-underline = ${colors.my_color4}
 
 content-margin = 0
 
