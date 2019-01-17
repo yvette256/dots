@@ -1,8 +1,10 @@
 # Dotfiles
 
-## Setup (Arch Linux)
+## Setup
 
 Use `wal -ig path/to/image.png && wal-set` to apply wallpaper and generated colorscheme.  
+
+I use Arch btw
 
 ### Primary:
 - Shell: [bash](https://www.gnu.org/software/bash/)
@@ -15,17 +17,19 @@ Use `wal -ig path/to/image.png && wal-set` to apply wallpaper and generated colo
 - Color theme generation: [pywal](https://github.com/dylanaraps/pywal)  
 
 ### Dependencies:
-- [pulseaudio](https://www.archlinux.org/packages/?name=pulseaudio), for volume control.
-- [NetworkManager](https://www.archlinux.org/packages/extra/x86_64/networkmanager/) and [nm-applet](https://www.archlinux.org/packages/extra/x86_64/network-manager-applet/), for network management.
-- [xclip](https://github.com/astrand/xclip), for copying to clipboard.
-- [imagemagick](https://github.com/ImageMagick/ImageMagick), for pywal.
-- [FontAwesome](https://aur.archlinux.org/packages/ttf-font-awesome/), [Inconsolata](https://www.archlinux.org/packages/community/any/ttf-inconsolata/), [DejaVu](https://www.archlinux.org/packages/extra/any/ttf-dejavu/), for fonts.
+- [pulseaudio](https://www.archlinux.org/packages/?name=pulseaudio)
+- [NetworkManager](https://www.archlinux.org/packages/extra/x86_64/networkmanager/) and [nm-applet](https://www.archlinux.org/packages/extra/x86_64/network-manager-applet/)
+- [xclip](https://github.com/astrand/xclip)
+- [imagemagick](https://github.com/ImageMagick/ImageMagick)
+- [FontAwesome](https://aur.archlinux.org/packages/ttf-font-awesome/), [Inconsolata](https://www.archlinux.org/packages/community/any/ttf-inconsolata/), [DejaVu](https://www.archlinux.org/packages/extra/any/ttf-dejavu/)
 - [light](https://github.com/haikarainen/light), to control backlight when `xbacklight` doesn't work.
-- [compton](https://github.com/chjj/compton), for compositing.
-- [powerline-shell](https://github.com/b-ryan/powerline-shell), for shell prompt.
+- [compton](https://github.com/chjj/compton)
+- [powerline-shell](https://github.com/b-ryan/powerline-shell)
 - [oomox](https://github.com/themix-project/oomox), for pywal gtk theme.
 - [xorg-xrdb](https://www.archlinux.org/packages/extra/x86_64/xorg-xrdb/), for setting resources.
 - [xorg-xinput](https://www.archlinux.org/packages/extra/x86_64/xorg-xinput/), for configuring input devices (such as touchpad). 
+- [i3lock-fancy](https://github.com/meskarune/i3lock-fancy)
+- [vundle](https://github.com/VundleVim/Vundle.vim), for managing vim plugins.
 
 ## Managing Dotfiles
 
