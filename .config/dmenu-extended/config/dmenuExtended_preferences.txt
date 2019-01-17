@@ -19,7 +19,10 @@
     "indicator_submenu": "->",
     "menu": "rofi",
     "menu_arguments": [
-        "-dmenu"
+        "-dmenu",
+        "-i",
+        "-theme",
+        "~/.cache/wal/colors-rofi-dark-mod.rasi"
     ],
     "password_helper": [
         "zenity",
@@ -28,7 +31,7 @@
     ],
     "path_aliasFile": "/home/yvette/.bash_aliases",
     "path_shellCommand": "~/.dmenuEextended_shellCommand.sh",
-    "prompt": "Open",
+    "prompt": "Open:",
     "scan_hidden_folders": false,
     "terminal": "xterm",
     "valid_extensions": [
