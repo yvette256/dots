@@ -36,7 +36,7 @@ done
 
 s="$(($secs + 60*$mins + 3600*$hrs))"
 
-if [[ -z "$@" ]]; then
+if [[ -z "$@" || $s -le 0 ]]; then
     usage
 else
     countdown
