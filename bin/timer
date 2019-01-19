@@ -1,0 +1,40 @@
+#!/usr/bin/sh
+
+# Requires date
+
+secs=''
+mins=''
+hrs=''
+
+while getopts 'smh' flag; do
+    case "${flag}" in
+        s) secs="${OPTARG}" ;;
+        m) mins="${OPTARG}" ;;
+        h) hrs="${OPTARG}" ;;
+    esac
+done
+
+s=$(($secs+60*$minutes+3600*$hours:))
+
+usage() {
+    printf "usage: timer -s [seconds] -m [minutes] -h [hours]"
+}
+
+countdown() {
+    time="$(date -d@$1 -u +%H:%M:%S)"
+    notify-send "Timer Set!" "Set for $time."
+
+    date1=$((`date +%s` + $1)); 
+    while [ "$date1" -ge `date +%s` ]; do 
+        echo -ne "$(date -u --date @$(($date1 - `date +%s`)) +%H:%M:%S)\r";
+        sleep 0.1
+    done
+   
+    notify-send "Time's Up!" "$time has passed."
+}
+
+if [ -z "$@" ]; then
+    usage
+else
+    countdown "$@"
+fi
