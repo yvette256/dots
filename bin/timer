@@ -2,29 +2,16 @@
 
 # Requires date
 
-secs=''
-mins=''
-hrs=''
-
-while getopts 'smh' flag; do
-    case "${flag}" in
-        s) secs="${OPTARG}" ;;
-        m) mins="${OPTARG}" ;;
-        h) hrs="${OPTARG}" ;;
-    esac
-done
-
-s=$(($secs+60*$minutes+3600*$hours:))
-
 usage() {
-    printf "usage: timer -s [seconds] -m [minutes] -h [hours]"
+    printf "usage: timer [-s seconds] [-m minutes] [-h hours]\n"
+    exit "1"
 }
 
 countdown() {
-    time="$(date -d@$1 -u +%H:%M:%S)"
+    time="$(date -d@$s -u +%H:%M:%S)"
     notify-send "Timer Set!" "Set for $time."
 
-    date1=$((`date +%s` + $1)); 
+    date1=$((`date +%s` + $s)); 
     while [ "$date1" -ge `date +%s` ]; do 
         echo -ne "$(date -u --date @$(($date1 - `date +%s`)) +%H:%M:%S)\r";
         sleep 0.1
@@ -33,8 +20,25 @@ countdown() {
     notify-send "Time's Up!" "$time has passed."
 }
 
-if [ -z "$@" ]; then
+secs=0
+mins=0
+hrs=0
+
+while getopts ":s:m:h:" flag; do
+    case "${flag}" in
+        s) secs="${OPTARG}" ;;
+        m) mins="${OPTARG}" ;;
+        h) hrs="${OPTARG}" ;;
+        \?) usage ;;
+        *) usage ;;
+    esac
+done
+
+s="$(($secs + 60*$mins + 3600*$hrs))"
+
+if [[ -z "$@" ]]; then
     usage
 else
-    countdown "$@"
+    countdown
 fi
+
