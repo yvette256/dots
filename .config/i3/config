@@ -219,9 +219,12 @@ bindsym $mod+Return exec termite
 # Bind mod+PrtSc to select area + copy to clipboard
 bindsym --release $mod+Print exec import png:- | xclip -selection c -t image/png
 
+# Bind mod+c to rofi
+bindsym $mod+c exec rofi -show calc
+
 # Set colors from resource
-set_from_resource	$background	background
-set_from_resource	$foreground	foreground
+set_from_resource	$backgr 	background
+set_from_resource	$foregr 	foreground
 set_from_resource	$color0		color0
 set_from_resource 	$color1 	color1
 set_from_resource 	$color2 	color2
@@ -242,10 +245,15 @@ set_from_resource	$color15	color15
 
 # Set colors
 # class                 border  backgr. text    indicator child_border
-client.focused          $color4 $color4 #ffffff $color2   $color4
-client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
-client.unfocused        #333333 #222222 #888888 #292d2e   #222222
-client.urgent           #2f343a #900000 #ffffff #900000   #900000
+client.focused          $color1 $color1 #ffffff $color4   $color1
+client.focused_inactive $backgr #5f676a #ffffff #484e50   #5f676a
+client.unfocused        $backgr $backgr #888888 #292d2e   #222222
+client.urgent           #2f343a $color4 #ffffff $color4   $color4
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
 client.background       #ffffff
+
+# Enable floating for yad
+for_window [class="Yad"] floating enable
+
+#

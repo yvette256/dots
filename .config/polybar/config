@@ -5,10 +5,10 @@
 my_background 	= ${xrdb:background}
 my_foreground 	= ${xrdb:foreground}
 my_color0	= ${xrdb:color0}
-my_color1	= ${xrdb:color1}
+my_color4	= ${xrdb:color1}
 my_color2	= ${xrdb:color2}
 my_color3	= ${xrdb:color3}
-my_color4	= ${xrdb:color4}
+my_color1	= ${xrdb:color4}
 my_color5	= ${xrdb:color5}
 my_color6	= ${xrdb:color6}
 my_color7	= ${xrdb:color7}
@@ -98,8 +98,8 @@ label-visible-padding = 4
 
 label-urgent = %name%
 label-urgent-foreground = ${colors.my_foreground}
-label-urgent-background = ${colors.my_background}
-label-urgent-underline = ${colors.my_color2}
+label-urgent-background = ${colors.my_color1}
+label-urgent-underline = ${colors.my_color1}
 label-urgent-padding = 1
 
 [module/date]
@@ -133,7 +133,7 @@ label-full = %percentage%%
 
 format-charging-background = ${colors.my_background}
 format-charging = " <label-charging>"
-format-charging-underline = ${colors.my_color2}
+format-charging-underline = ${colors.my_background}
 format-charging-padding = 1
 
 format-discharging-background = ${colors.my_background}
@@ -180,7 +180,7 @@ margin-bottom = 5
 type = internal/xwindow
 label = %title:0:30:...%
 label-padding = 10
-label-foreground = ${colors.my_color4}
+label-foreground = ${colors.my_color1}
 
 [module/keyboard]
 type = internal/xkeyboard
@@ -190,7 +190,7 @@ format-spacing = 0
 label-indicator = %name%
 label-indicator-padding = 2
 label-indicator-background = ${colors.my_background}
-label-indicator-foreground = ${colors.my_color2}
+label-indicator-foreground = ${colors.my_color1}
 
 [module/wireless-network]
 type = internal/network
@@ -203,7 +203,7 @@ unknown-as-up = false
 
 format-connected = " <label-connected>"
 format-connected-padding = 1
-format-connected-underline = ${colors.my_color2}
+format-connected-underline = ${colors.my_background}
 
 format-disconnected = " <label-disconnected>"
 format-disconnected-padding = ${self.format-connected-padding}
@@ -220,7 +220,7 @@ type = internal/pulseaudio
 
 format-volume = " <label-volume>"
 format-volume-padding = 1
-format-volume-underline = ${colors.my_color2}
+format-volume-underline = ${colors.my_background}
 
 format-muted = " <label-muted>"
 format-muted-padding = ${self.format-volume-padding}
@@ -234,8 +234,8 @@ type = custom/text
 
 content = ""
 
-content-background = ${colors.my_background}
-content-foreground = ${colors.my_color4}
+content-background = ${colors.my_color4}
+content-foreground = ${colors.my_background}
 content-padding = 1
 content-underline = ${colors.my_color4}
 
