@@ -9,7 +9,7 @@ usage() {
 
 countdown() {
     time="$(date -d@$s -u +%H:%M:%S)"
-    notify-send "Timer Set!" "Set for $time."
+    #notify-send "Timer Set!" "Set for $time."
 
     date1=$((`date +%s` + $s)); 
     while [ "$date1" -ge `date +%s` ]; do 
