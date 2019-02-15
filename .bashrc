@@ -13,6 +13,10 @@ alias ls='ls --color=auto'
 alias scrots='scrot ~/Pictures/Screenshots/%F-%H%M%S_scrot.png'
 alias dots='git --git-dir=$HOME/.dots.git/ --work-tree=$HOME'
 
+rice() {
+    wal -i "$@" -g && wal-set
+}
+
 # Set powerline shell prompt
 function _update_ps1() {
     PS1=$(powerline-shell $?)
