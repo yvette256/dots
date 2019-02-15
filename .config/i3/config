@@ -246,7 +246,7 @@ set_from_resource	$color15	color15
 # Set colors
 # class                 border  backgr. text    indicator child_border
 client.focused          $color1 $color1 #ffffff $color4   $color1
-client.focused_inactive $backgr #5f676a #ffffff #484e50   #5f676a
+client.focused_inactive #5f676a #5f676a #ffffff #484e50   #5f676a
 client.unfocused        $backgr $backgr #888888 #292d2e   #222222
 client.urgent           #2f343a $color4 #ffffff $color4   $color4
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
@@ -256,4 +256,3 @@ client.background       #ffffff
 # Enable floating for yad
 for_window [class="Yad"] floating enable
 
-#

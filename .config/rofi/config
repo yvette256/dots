@@ -1,3 +1,4 @@
 rofi.theme: .cache/wal/colors-rofi-dark.rasi
 rofi.modi: calc,run,window
+rofi.font: Iosevka 13
 
