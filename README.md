@@ -17,19 +17,14 @@ I use Arch btw
 - Color theme generation: [pywal](https://github.com/dylanaraps/pywal)  
 
 ### Dependencies:
-- [pulseaudio](https://www.archlinux.org/packages/?name=pulseaudio)
-- [NetworkManager](https://www.archlinux.org/packages/extra/x86_64/networkmanager/) and [nm-applet](https://www.archlinux.org/packages/extra/x86_64/network-manager-applet/)
-- [xclip](https://github.com/astrand/xclip)
-- [imagemagick](https://github.com/ImageMagick/ImageMagick)
-- [FontAwesome](https://aur.archlinux.org/packages/ttf-font-awesome/), [Inconsolata](https://www.archlinux.org/packages/community/any/ttf-inconsolata/), [DejaVu](https://www.archlinux.org/packages/extra/any/ttf-dejavu/)
-- [light](https://github.com/haikarainen/light), to control backlight when `xbacklight` doesn't work.
-- [compton](https://github.com/chjj/compton)
-- [powerline-shell](https://github.com/b-ryan/powerline-shell)
-- [oomox](https://github.com/themix-project/oomox), for pywal gtk theme.
-- [xorg-xrdb](https://www.archlinux.org/packages/extra/x86_64/xorg-xrdb/), for setting resources.
-- [xorg-xinput](https://www.archlinux.org/packages/extra/x86_64/xorg-xinput/), for configuring input devices (such as touchpad). 
+- [pulseaudio](https://www.archlinux.org/packages/?name=pulseaudio), [light](https://github.com/haikarainen/light) to control backlight when `xbacklight` doesn't work, [compton](https://github.com/chjj/compton).
+- Network: [NetworkManager](https://www.archlinux.org/packages/extra/x86_64/networkmanager/), [nm-applet](https://www.archlinux.org/packages/extra/x86_64/network-manager-applet/)
+- [imagemagick](https://github.com/ImageMagick/ImageMagick), [oomox](https://github.com/themix-project/oomox) for Pywal GTK theme.
+- Fonts: [FontAwesome](https://aur.archlinux.org/packages/ttf-font-awesome/), [Inconsolata](https://www.archlinux.org/packages/community/any/ttf-inconsolata/), [DejaVu](https://www.archlinux.org/packages/extra/any/ttf-dejavu/), [Iosveka](https://github.com/be5invis/Iosevka).
+- [xclip](https://github.com/astrand/xclip), [xorg-xrdb](https://www.archlinux.org/packages/extra/x86_64/xorg-xrdb/), [xorg-xinput](https://www.archlinux.org/packages/extra/x86_64/xorg-xinput/) for configuring input devices (such as touchpad). 
+- [powerline-shell](https://github.com/b-ryan/powerline-shell), [vundle](https://github.com/VundleVim/Vundle.vim) for managing vim plugins.
+- Rofi plugins: [rofi-calc](https://github.com/svenstaro/rofi-calc), [rofimoji](https://github.com/fdw/rofimoji).
 - [i3lock-fancy](https://github.com/meskarune/i3lock-fancy)
-- [vundle](https://github.com/VundleVim/Vundle.vim), for managing vim plugins.
 
 ## Managing Dotfiles
 
