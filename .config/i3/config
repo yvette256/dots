@@ -13,7 +13,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monospace 8
+font pango:Iosevka 9
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -219,8 +219,9 @@ bindsym $mod+Return exec termite
 # Bind mod+PrtSc to select area + copy to clipboard
 bindsym --release $mod+Print exec import png:- | xclip -selection c -t image/png
 
-# Bind mod+c to rofi
-bindsym $mod+c exec rofi -show calc
+# Rofi binds
+bindsym $mod+c exec rofi -show window
+bindsym $mod+m exec rofimoji
 
 # Set colors from resource
 set_from_resource	$backgr 	background
