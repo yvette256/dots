@@ -178,6 +178,7 @@ exec --no-startup-id wal -R
 # Set touchpad tap-to-click on
 exec xinput set-prop 13 293 1
 exec xinput set-prop 14 311 1
+exec xinput set-prop 17 311 1
 
 # Start nm-applet
 exec --no-startup-id nm-applet
@@ -246,7 +247,7 @@ set_from_resource	$color15	color15
 
 # Set colors
 # class                 border  backgr. text    indicator child_border
-client.focused          $color1 $color1 #ffffff $color4   $color1
+client.focused          $color1 $color1 $backgr $color4   $color1
 client.focused_inactive #5f676a #5f676a #ffffff #484e50   #5f676a
 client.unfocused        $backgr $backgr #888888 #292d2e   #222222
 client.urgent           #2f343a $color4 #ffffff $color4   $color4
