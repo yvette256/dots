@@ -37,3 +37,6 @@ inoremap < <><Esc>i
 inoremap " ""<Esc>i
 
 vnoremap <C-c> "+y
+
+noremap <C-Up> 5k
+noremap<C-Down> 5j
