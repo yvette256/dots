@@ -1,3 +1,5 @@
+" Vundle
+
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -6,9 +8,10 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'davidhalter/jedi-vim'
+" Plugin 'davidhalter/jedi-vim'
 Plugin 'lervag/vimtex'
-Plugin 'c.vim'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'mattn/emmet-vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -18,6 +21,8 @@ filetype plugin indent on    " required
 " :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
 " :PluginSearch foo - searches for foo; append `!` to refresh local cache
 " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+
+" My Settings
 
 set number
 syntax on
@@ -39,10 +44,14 @@ set smartcase
 inoremap ( ()<Esc>i
 inoremap { {}<Esc>i
 inoremap [ []<Esc>i
-inoremap < <><Esc>i
+" inoremap < <><Esc>i
 inoremap " ""<Esc>i
+inoremap {<CR> {<CR>}<ESC>O
 
 vnoremap <C-c> "+y
 
 noremap <C-Up> 5k
 noremap<C-Down> 5j
+
+let g:ycm_key_list_stop_completion = ['<C-y>', '<CR>']
+
