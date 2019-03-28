@@ -8,6 +8,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'lervag/vimtex'
+Plugin 'c.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -21,14 +22,19 @@ filetype plugin indent on    " required
 set number
 syntax on
 set autoindent
+set smartindent
 
 filetype plugin indent on
-" show existing tab with 4 spaces width
 set tabstop=4
-" when indenting with '>', use 4 spaces width
 set shiftwidth=4
-" On pressing tab, insert 4 spaces
+set softtabstop=4
 set expandtab
+set backspace=indent,eol,start 
+
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
 
 inoremap ( ()<Esc>i
 inoremap { {}<Esc>i
