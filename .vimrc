@@ -48,10 +48,34 @@ inoremap [ []<Esc>i
 inoremap " ""<Esc>i
 inoremap {<CR> {<CR>}<ESC>O
 
+inoremap (( (
+inoremap {{ {
+inoremap [[ [
+inoremap "" "
+
+inoremap '' ''<Left>
+inoremap <> <><Left>
+
+function! BracketBS()
+    let line = getline('.')
+    let col = col('.')
+    let left = strpart(line, col-2, 1)
+    let right = strpart(line, col-1, 1)
+    if left == "(" && right == ")"
+        return "\<Right>\<BS>\<BS>"
+    else
+        return "\<BS>"
+    endif
+endf
+
+inoremap <expr> <BS> BracketBS()
+
+inoremap /*<Space> /*<Space><Space>*/<Left><Left><Left>
+
 vnoremap <C-c> "+y
 
 noremap <C-Up> 5k
-noremap<C-Down> 5j
+noremap <C-Down> 5j
 
 let g:ycm_key_list_stop_completion = ['<C-y>', '<CR>']
 
