@@ -78,4 +78,5 @@ noremap <C-Up> 5k
 noremap <C-Down> 5j
 
 let g:ycm_key_list_stop_completion = ['<C-y>', '<CR>']
-
+let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_autoclose_preview_window_after_completion = 1

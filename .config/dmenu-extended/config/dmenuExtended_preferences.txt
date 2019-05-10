@@ -61,7 +61,8 @@
         "md",
         "html",
         "sublime-project",
-        "mp4"
+        "mp4",
+        "mkv"
     ],
     "watch_folders": [
         "~/"
