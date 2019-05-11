@@ -14,7 +14,7 @@ alias scrots='scrot ~/Pictures/Screenshots/%F-%H%M%S_scrot.png'
 alias dots='git --git-dir=$HOME/.dots.git/ --work-tree=$HOME'
 
 rice() {
-    wal -i "$@" -g && wal-set
+    wal -i "$@" && wal-set
 }
 
 # Set powerline shell prompt
