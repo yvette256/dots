@@ -106,16 +106,16 @@ label-urgent-padding = 1
 type = internal/date
 interval = 1
 
-date =
-date-alt =
+date = "%a. %b %d"
+date-alt = "%D"
 
-time = "%a. %b %d, %I:%M:%S %p "
-time-alt =
+time = "%I:%M:%S %p"
+time-alt = "%R"
 
 format-prefix-foreground = ${colors.my_foreground}
 format-underline = ${colors.my_color1}
 
-label = %date% %time%
+label = "  %date%, %time% "
 label-background = ${colors.my_color1}
 label-foreground = ${colors.my_background}
 

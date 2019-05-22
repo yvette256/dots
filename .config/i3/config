@@ -247,10 +247,10 @@ set_from_resource	$color15	color15
 
 # Set colors
 # class                 border  backgr. text    indicator child_border
-client.focused          $color1 $color1 $backgr $color4   $color1
-client.focused_inactive #5f676a #5f676a #ffffff #484e50   #5f676a
-client.unfocused        $backgr $backgr $foregr #292d2e   #222222
-client.urgent           #2f343a $color4 #ffffff $color4   $color4
+client.focused          $color1 $color1 $backgr $color2   $color1
+client.focused_inactive $backgr $backgr $color1 #484e50   $backgr
+client.unfocused        $backgr $backgr $foregr #292d2e   $backgr
+client.urgent           #2f343a $color2 #ffffff $color2   $color2
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
 client.background       #ffffff
