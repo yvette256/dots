@@ -55,6 +55,7 @@ inoremap "" "
 
 inoremap '' ''<Left>
 inoremap <> <><Left>
+inoremap `` ``<Left>
 
 function! BracketBS()
     let line = getline('.')
