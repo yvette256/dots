@@ -12,6 +12,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'lervag/vimtex'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'mattn/emmet-vim'
+Plugin 'vim-airline/vim-airline'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -64,6 +65,10 @@ function! BracketBS()
     let right = strpart(line, col-1, 1)
     if left == "(" && right == ")"
         return "\<Right>\<BS>\<BS>"
+    elseif left == "[" && right == "]"
+        return "\<Right>\<BS>\<BS>"
+    elseif left == "{" && right == "}"
+        return "\<Right>\<BS>\<BS>"
     else
         return "\<BS>"
     endif
@@ -81,3 +86,5 @@ noremap <C-Down> 5j
 let g:ycm_key_list_stop_completion = ['<C-y>', '<CR>']
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
+let g:tex_flavor = 'latex'
+let g:airline_powerline_fonts = 1
