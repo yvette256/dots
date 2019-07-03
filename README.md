@@ -19,12 +19,12 @@ Use `rice path/to/image.png` to apply wallpaper and generated colorscheme.
 ### Dependencies:
 - Network: [NetworkManager](https://www.archlinux.org/packages/extra/x86_64/networkmanager/), [nm-applet](https://www.archlinux.org/packages/extra/x86_64/network-manager-applet/)
 - Fonts: [FontAwesome](https://aur.archlinux.org/packages/ttf-font-awesome/), [Inconsolata](https://www.archlinux.org/packages/community/any/ttf-inconsolata/), [DejaVu](https://www.archlinux.org/packages/extra/any/ttf-dejavu/), [Iosveka](https://github.com/be5invis/Iosevka).
-- Rofi plugins: [rofi-calc](https://github.com/svenstaro/rofi-calc), [rofimoji](https://github.com/fdw/rofimoji).
+- [rofi](https://github.com/davatorium/rofi): [rofi-calc](https://github.com/svenstaro/rofi-calc), [rofimoji](https://github.com/fdw/rofimoji).
 - [xorg](https://www.archlinux.org/groups/x86_64/xorg/): [xclip](https://github.com/astrand/xclip), [xorg-xrdb](https://www.archlinux.org/packages/extra/x86_64/xorg-xrdb/), [xorg-xinput](https://www.archlinux.org/packages/extra/x86_64/xorg-xinput/) for configuring input devices (such as touchpad). 
 - [powerline-shell](https://github.com/b-ryan/powerline-shell), [vundle](https://github.com/VundleVim/Vundle.vim) for managing vim plugins, [mkpdf](https://github.com/seifferth/mkpdf) for LaTeX compilation.
-- [i3lock-fancy](https://github.com/meskarune/i3lock-fancy)
+- [xcwd](https://github.com/schischi/xcwd), [i3lock-fancy](https://github.com/meskarune/i3lock-fancy)
 - [pulseaudio](https://www.archlinux.org/packages/?name=pulseaudio), [light](https://github.com/haikarainen/light) to control backlight when `xbacklight` doesn't work, [compton](https://github.com/chjj/compton).
-- [imagemagick](https://github.com/ImageMagick/ImageMagick), [oomox](https://github.com/themix-project/oomox), [wpgtk](https://github.com/deviantfero/wpgtk) for Pywal GTK theme.
+- [imagemagick](https://github.com/ImageMagick/ImageMagick), [wpgtk](https://github.com/deviantfero/wpgtk) for Pywal GTK theme, [feh](https://www.archlinux.org/packages/extra/x86_64/feh/).
 
 ## Managing Dotfiles
 

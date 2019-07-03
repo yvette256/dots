@@ -175,9 +175,7 @@ bindsym $mod+r mode "resize"
 exec --no-startup-id wal -R
 
 # Set touchpad tap-to-click on
-exec xinput set-prop 13 293 1
-exec xinput set-prop 14 311 1
-exec xinput set-prop 17 311 1
+#exec xinput set-prop 17 311 1
 
 # Start nm-applet
 exec --no-startup-id nm-applet
