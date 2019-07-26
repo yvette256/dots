@@ -42,6 +42,8 @@ set incsearch
 set ignorecase
 set smartcase
 
+inoremap kj <Esc>
+
 inoremap ( ()<Esc>i
 inoremap { {}<Esc>i
 inoremap [ []<Esc>i
@@ -79,9 +81,6 @@ inoremap <expr> <BS> BracketBS()
 inoremap /*<Space> /*<Space><Space>*/<Left><Left><Left>
 
 vnoremap <C-c> "+y
-
-noremap <C-Up> 5k
-noremap <C-Down> 5j
 
 let g:ycm_key_list_stop_completion = ['<C-y>', '<CR>']
 let g:ycm_autoclose_preview_window_after_insertion = 1
