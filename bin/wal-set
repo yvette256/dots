@@ -12,7 +12,7 @@ reload_dunst() {
 
     pkill dunst
     dunst -config ~/.config/dunst/dunstrc \
-        -font "Iosevka 12" \
+        -font "Iosevka 11" \
         -geom "${geometry}" \
         -fn "${font}" \
         -lb "${color0:-#F0F0F0}" \
