@@ -11,8 +11,8 @@ Plugin 'VundleVim/Vundle.vim'
 " Plugin 'davidhalter/jedi-vim'
 Plugin 'lervag/vimtex'
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'mattn/emmet-vim'
 Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -87,3 +87,5 @@ let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:tex_flavor = 'latex'
 let g:airline_powerline_fonts = 1
+let g:airline_solarized_bg='dark'
+
