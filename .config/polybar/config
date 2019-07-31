@@ -33,8 +33,8 @@ radius = 0.0
 fixed-center = true
 
 
-background = ${colors.my_background}
-foreground =  ${colors.my_foreground}
+background = #00000000
+foreground = ${colors.my_foreground}
 
 line-size = 2.5
 line-color = ${colors.my_color1}
@@ -45,17 +45,18 @@ border-color = ${colors.my_color2}
 padding-left = 0
 padding-right = 0
 
-module-margin-left = 1
+module-margin-left = 0
 module-margin-right = 0
 
 font-1 = Font Awesome 5 Free:style=Regular:size=9;1
 font-2 = Font Awesome 5 Free:style=Solid:size=9;1
-font-0 = Iosevka:size=11;1
+font-0 = Iosevka:size=11:fontformat=truetype:pixelsize=11:antialias=true;1
 font-3 = DejaVu Sans:style=Bold:size=11;1
+font-4 = Iosevka:size=12:fontformat=truetype:antialias=true;1
 
-modules-left = i3 xwindow
-modules-center = date 
-modules-right = keyboard volume wireless-network battery powermenu
+modules-left = i3 xwindow lb
+modules-center = 
+modules-right = rc date rb keyboard volume wireless-network battery powermenu
 
 tray-position = 
 tray-padding = 9
@@ -74,22 +75,21 @@ wm-restack = i3
 type = internal/i3
 strip-wsnumbers = true
 
-label-unfocused-background = ${colors.my_background}
-label-unfocused-foreground = ${colors.my_foreground}
+format = "<label-state><label-mode>"
 
-label-mode = %mode%
+label-mode = "%mode%"
 label-mode-padding = 1
 label-mode-background = ${colors.my_color1}
 
 label-focused = %name%
-;label-focused-foreground = ${colors.my_foreground}
 label-focused-foreground = ${colors.my_background}
-;label-focused-background = ${colors.my_background}
 label-focused-background = ${colors.my_color1}
 label-focused-underline = ${colors.my_color1}
 label-focused-padding = 1
 
 label-unfocused = %name%
+label-unfocused-background = ${colors.my_background}
+label-unfocused-foreground = ${colors.my_foreground}
 label-unfocused-padding = 1
 
 label-visible = %name%
@@ -115,7 +115,7 @@ time-alt = "%R"
 format-prefix-foreground = ${colors.my_foreground}
 format-underline = ${colors.my_color1}
 
-label = "  %date%, %time% "
+label = " %date%  %time% "
 label-background = ${colors.my_color1}
 label-foreground = ${colors.my_background}
 
@@ -179,8 +179,9 @@ margin-bottom = 5
 [module/xwindow]
 type = internal/xwindow
 label = %title:0:30:...%
-label-padding = 10
+label-padding = 1
 label-foreground = ${colors.my_color2}
+label-background= ${colors.my_background}
 
 [module/keyboard]
 type = internal/xkeyboard
@@ -188,7 +189,7 @@ format = <label-indicator>
 format-spacing = 0
 
 label-indicator = %name%
-label-indicator-padding = 5
+label-indicator-padding = 1
 label-indicator-background = ${colors.my_background}
 label-indicator-foreground = ${colors.my_color2}
 
@@ -204,10 +205,12 @@ unknown-as-up = false
 format-connected = " <label-connected>"
 format-connected-padding = 1
 format-connected-underline = ${colors.my_background}
+format-connected-background = ${colors.my_background}
 
 format-disconnected = " <label-disconnected>"
 format-disconnected-padding = ${self.format-connected-padding}
 format-disconnected-underline = ${self.format-connected-underline}
+format-disconnected-background = ${self.format-connected-background}
 
 label-connected = %essid% (%signal%%)
 label-connected-foreground = ${colors.my_foreground}
@@ -218,13 +221,15 @@ label-disconnected-foreground = ${colors.my_foreground}
 [module/volume]
 type = internal/pulseaudio
 
-format-volume = " <label-volume>"
+format-volume = "  <label-volume>"
 format-volume-padding = 1
 format-volume-underline = ${colors.my_background}
+format-volume-background = ${colors.my_background}
 
 format-muted = " <label-muted>"
 format-muted-padding = ${self.format-volume-padding}
 format-muted-underline = ${self.format-volume-underline}
+format-muted-background= ${self.format-volume-background}
 
 label-muted = MUTE
 label-muted-foreground = ${colors.my_foreground}
@@ -232,15 +237,40 @@ label-muted-foreground = ${colors.my_foreground}
 [module/powermenu]
 type = custom/text
 
-content = ""
+content-prefix = "%{T5}%{T-}"
+content-prefix-background = ${colors.my_background}
+content-prefix-foreground = ${colors.my_color1}
+
+content = "  "
 
 content-background = ${colors.my_color1}
 content-foreground = ${colors.my_background}
-content-padding = 1
-content-underline = ${colors.my_color1}
+content-padding = 0
 
 content-margin = 0
 
 click-left = ~/.config/polybar/pmenu_g
+
+[module/la]
+type = custom/text
+content = "%{T5}%{T-}"
+content-foreground = ${colors.my_color1} 
+content-background = ${colors.my_background}
+
+[module/lb]
+type = custom/text
+content = "%{T5}%{T-}"
+content-foreground = ${colors.my_background} 
+
+[module/rb]
+type = custom/text
+content = "%{T5}%{T-}"
+content-foreground = ${colors.my_background} 
+content-background = ${colors.my_color1} 
+
+[module/rc]
+type = custom/text
+content = "%{T5}%{T-}"
+content-foreground = ${colors.my_color1} 
 
 ; vim:ft=dosini

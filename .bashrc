@@ -10,7 +10,7 @@ export PATH="$PATH:/home/yvette/bin:/home/yvette/.gem/ruby/2.5.0/bin"
 
 # Set my aliases
 alias ls='ls --color=auto'
-alias scrots='scrot ~/Pictures/Screenshots/%F-%H%M%S_scrot.png'
+alias scrots='scrot ~/pictures/screenshots/%F-%H%M%S_scrot.png'
 alias dots='git --git-dir=$HOME/.dots.git/ --work-tree=$HOME'
 
 rice() {
