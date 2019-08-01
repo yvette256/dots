@@ -13,6 +13,8 @@ Plugin 'lervag/vimtex'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'jeaye/color_coded'
+Plugin 'vim-python/python-syntax'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -43,6 +45,7 @@ set ignorecase
 set smartcase
 
 inoremap kj <Esc>
+inoremap KJ <Esc>
 
 inoremap ( ()<Esc>i
 inoremap { {}<Esc>i
@@ -88,4 +91,5 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 let g:tex_flavor = 'latex'
 let g:airline_powerline_fonts = 1
 let g:airline_solarized_bg='dark'
+let g:python_highlight_all = 1
 
