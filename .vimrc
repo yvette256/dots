@@ -65,6 +65,7 @@ inoremap <expr> )  strpart(getline('.'), col('.')-1, 1) == ")" ? "\<Right>" : ")
 inoremap <expr> }  strpart(getline('.'), col('.')-1, 1) == "}" ? "\<Right>" : "}"
 inoremap <expr> ]  strpart(getline('.'), col('.')-1, 1) == "]" ? "\<Right>" : "]"
 inoremap <expr> >  strpart(getline('.'), col('.')-1, 1) == ">" ? "\<Right>" : ">"
+inoremap <expr> "  strpart(getline('.'), col('.')-1, 1) == "\"" ? "\<Right>" : "\"\"\<Left>"
 
 inoremap '' ''<Left>
 inoremap <> <><Left>
@@ -80,6 +81,8 @@ function! BracketBS()
     elseif left == "[" && right == "]"
         return "\<Right>\<BS>\<BS>"
     elseif left == "{" && right == "}"
+        return "\<Right>\<BS>\<BS>"
+    elseif left == "\"" && right == "\""
         return "\<Right>\<BS>\<BS>"
     else
         return "\<BS>"
@@ -99,4 +102,5 @@ let g:tex_flavor = 'latex'
 let g:airline_powerline_fonts = 1
 let g:airline_solarized_bg='dark'
 let g:python_highlight_all = 1
+let g:python_highlight_space_errors = 0
 
