@@ -50,11 +50,13 @@ inoremap KJ <Esc>
 inoremap ( ()<Esc>i
 inoremap { {}<Esc>i
 inoremap [ []<Esc>i
-" inoremap < <><Esc>i
 inoremap " ""<Esc>i
+
 inoremap {<CR> {<CR>}<ESC>O
+inoremap {;<CR> {<CR>};<ESC>O
 
 inoremap (; ();<Left><Left>
+inoremap "; "";<Left><Left>
 
 inoremap (( (
 inoremap {{ {
