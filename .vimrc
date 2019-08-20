@@ -51,6 +51,7 @@ inoremap ( ()<Esc>i
 inoremap { {}<Esc>i
 inoremap [ []<Esc>i
 inoremap " ""<Esc>i
+inoremap ' ''<Esc>i
 
 inoremap {<CR> {<CR>}<ESC>O
 inoremap {;<CR> {<CR>};<ESC>O
@@ -62,6 +63,23 @@ inoremap (( (
 inoremap {{ {
 inoremap [[ [
 inoremap "" "
+inoremap '' '
+
+function! Apostrophe()
+    let line = getline('.')
+    let col = col('.')
+    let left = strpart(line, col-2, 1)
+    let right = strpart(line, col-1, 1)
+    if left =~ "\a" || left =~ "[0-9]"
+        return "\'"
+    endif
+    if right == "\'"
+        return "\<Right>"
+    endif
+    return "\'\'\<Left>"
+endf
+
+inoremap <expr> '  Apostrophe()
 
 inoremap <expr> )  strpart(getline('.'), col('.')-1, 1) == ")" ? "\<Right>" : ")"
 inoremap <expr> }  strpart(getline('.'), col('.')-1, 1) == "}" ? "\<Right>" : "}"
@@ -69,7 +87,6 @@ inoremap <expr> ]  strpart(getline('.'), col('.')-1, 1) == "]" ? "\<Right>" : "]
 inoremap <expr> >  strpart(getline('.'), col('.')-1, 1) == ">" ? "\<Right>" : ">"
 inoremap <expr> "  strpart(getline('.'), col('.')-1, 1) == "\"" ? "\<Right>" : "\"\"\<Left>"
 
-inoremap '' ''<Left>
 inoremap <> <><Left>
 inoremap `` ``<Left>
 
@@ -85,6 +102,8 @@ function! BracketBS()
     elseif left == "{" && right == "}"
         return "\<Right>\<BS>\<BS>"
     elseif left == "\"" && right == "\""
+        return "\<Right>\<BS>\<BS>"
+    elseif left == "\'" && right == "\'"
         return "\<Right>\<BS>\<BS>"
     else
         return "\<BS>"
