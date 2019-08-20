@@ -107,10 +107,10 @@ type = internal/date
 interval = 1
 
 date = "%a. %b %d"
-date-alt = "%D"
+date-alt = "%a. %d"
 
 time = "%I:%M:%S %p"
-time-alt = "%R"
+time-alt = "%I:%M"
 
 format-prefix-foreground = ${colors.my_foreground}
 format-underline = ${colors.my_color1}

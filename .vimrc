@@ -15,6 +15,8 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'jeaye/color_coded'
 Plugin 'vim-python/python-syntax'
+Plugin 'tpope/vim-commentary'
+Plugin 'dense-analysis/ale'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -46,6 +48,8 @@ set smartcase
 
 inoremap kj <Esc>
 inoremap KJ <Esc>
+
+" Bracket behaviors
 
 inoremap ( ()<Esc>i
 inoremap { {}<Esc>i
@@ -112,10 +116,20 @@ endf
 
 inoremap <expr> <BS> BracketBS()
 
+" C comments
 inoremap /*<Space> /*<Space><Space>*/<Left><Left><Left>
 
+" Copy to clipboard
 vnoremap <C-c> "+y
 
+" Relative/absolute line numbers
+" augroup numbertoggle
+"   autocmd!
+"   autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu | set rnu   | endif
+"   autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu | set nornu | endif
+" augroup END
+
+" Plugin settings
 let g:ycm_key_list_stop_completion = ['<C-y>', '<CR>']
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
@@ -124,4 +138,5 @@ let g:airline_powerline_fonts = 1
 let g:airline_solarized_bg='dark'
 let g:python_highlight_all = 1
 let g:python_highlight_space_errors = 0
+let g:ale_set_signs = 0
 
