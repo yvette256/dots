@@ -74,7 +74,7 @@ function! Apostrophe()
     let col = col('.')
     let left = strpart(line, col-2, 1)
     let right = strpart(line, col-1, 1)
-    if left =~ "\a" || left =~ "[0-9]"
+    if left =~ "[0-9A-Za-z]"
         return "\'"
     endif
     if right == "\'"
