@@ -76,13 +76,13 @@ function! Apostrophe()
     let col = col('.')
     let left = strpart(line, col-2, 1)
     let right = strpart(line, col-1, 1)
-    if left =~ "[0-9A-Za-z]"
-        return "\'"
-    endif
     if right == "\'"
         return "\<Right>"
+    elseif left =~ "[0-9A-Za-z]"
+        return "\'"
+    else
+        return "\'\'\<Left>"
     endif
-    return "\'\'\<Left>"
 endf
 
 inoremap <expr> '  Apostrophe()
@@ -124,12 +124,7 @@ inoremap /*<Space> /*<Space><Space>*/<Left><Left><Left>
 " Copy to clipboard
 vnoremap <C-c> "+y
 
-" Relative/absolute line numbers
-" augroup numbertoggle
-"   autocmd!
-"   autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu | set rnu   | endif
-"   autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu | set nornu | endif
-" augroup END
+autocmd FileType matlab setlocal commentstring=%\ %s
 
 " Plugin settings
 let g:ycm_key_list_stop_completion = ['<C-y>', '<CR>']
