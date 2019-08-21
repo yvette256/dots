@@ -64,6 +64,7 @@ inoremap {;<CR> {<CR>};<ESC>O
 
 inoremap (; ();<Left><Left>
 inoremap "; "";<Left><Left>
+inoremap {; {};<Left><Left>
 
 inoremap (( (
 inoremap {{ {
