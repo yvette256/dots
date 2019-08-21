@@ -13,10 +13,12 @@ Plugin 'lervag/vimtex'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'jeaye/color_coded'
+" Plugin 'jeaye/color_coded'
 Plugin 'vim-python/python-syntax'
 Plugin 'tpope/vim-commentary'
 Plugin 'dense-analysis/ale'
+Plugin 'vim-jp/vim-cpp'
+Plugin 'octol/vim-cpp-enhanced-highlight'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -139,4 +141,7 @@ let g:airline_solarized_bg='dark'
 let g:python_highlight_all = 1
 let g:python_highlight_space_errors = 0
 let g:ale_set_signs = 0
+let g:cpp_class_scope_highlight = 1
+let g:cpp_member_variable_highlight = 1
+let g:cpp_class_decl_highlight = 1
 
