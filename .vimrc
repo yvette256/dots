@@ -8,12 +8,10 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-" Plugin 'davidhalter/jedi-vim'
 Plugin 'lervag/vimtex'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-" Plugin 'jeaye/color_coded'
 Plugin 'vim-python/python-syntax'
 Plugin 'tpope/vim-commentary'
 Plugin 'dense-analysis/ale'
@@ -49,7 +47,7 @@ set ignorecase
 set smartcase
 
 inoremap kj <Esc>
-inoremap KJ <Esc>
+cnoremap kj <C-c>
 
 " Bracket behaviors
 
