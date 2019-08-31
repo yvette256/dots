@@ -4,33 +4,34 @@
 
 I use Arch, btw.
 
-Use `rice path/to/image.png` to apply wallpaper and generated colorscheme.  
+Use `rice path/to/image.png` to apply wallpaper and generated colorscheme.
 
 ### Primary
 - Shell: [bash](https://www.gnu.org/software/bash/)
 - Terminal emulator: [kitty](https://github.com/kovidgoyal/kitty)
-- WM: [i3-gaps](https://github.com/Airblader/i3)  
-- Bar: [polybar](https://github.com/jaagr/polybar)  
-- Launcher: [dmenu-extended](https://github.com/MarkHedleyJones/dmenu-extended) with [rofi](https://github.com/DaveDavenport/rofi)  
+- WM: [i3-gaps](https://github.com/Airblader/i3)
+- Bar: [polybar](https://github.com/jaagr/polybar)
+- Launcher: [dmenu-extended](https://github.com/MarkHedleyJones/dmenu-extended) + [rofi](https://github.com/DaveDavenport/rofi)
 - Text editor: [(g)vim](https://www.archlinux.org/packages/extra/x86_64/gvim/)
-- Notifications: [dunst](https://github.com/dunst-project/dunst)  
-- Color theme generation: [pywal](https://github.com/dylanaraps/pywal)  
+- Notifications: [dunst](https://github.com/dunst-project/dunst)
+- Color theme generation: [pywal](https://github.com/dylanaraps/pywal)
 
 ### Dependencies
 - Network: [NetworkManager](https://www.archlinux.org/packages/extra/x86_64/networkmanager/), [nm-applet](https://www.archlinux.org/packages/extra/x86_64/network-manager-applet/).
 - Fonts: [FontAwesome](https://aur.archlinux.org/packages/ttf-font-awesome/), [Inconsolata](https://www.archlinux.org/packages/community/any/ttf-inconsolata/), [DejaVu](https://www.archlinux.org/packages/extra/any/ttf-dejavu/), [Iosevka](https://github.com/be5invis/Iosevka).
 - GTK: [Adwaita (cursor)](https://www.archlinux.org/packages/?name=gnome-themes-extra), [deepin-dark (icon)](https://www.archlinux.org/packages/community/any/deepin-icon-theme/).
-- [rofi](https://github.com/davatorium/rofi): [rofi-calc](https://github.com/svenstaro/rofi-calc), [rofimoji](https://github.com/fdw/rofimoji).
-- [xorg](https://www.archlinux.org/groups/x86_64/xorg/): [xclip](https://github.com/astrand/xclip), [xorg-xrdb](https://www.archlinux.org/packages/extra/x86_64/xorg-xrdb/), [xorg-xinput](https://www.archlinux.org/packages/extra/x86_64/xorg-xinput/). 
-- [powerline-shell](https://github.com/b-ryan/powerline-shell), [powerline-fonts](https://github.com/powerline/fonts), [vundle](https://github.com/VundleVim/Vundle.vim), [mkpdf](https://github.com/seifferth/mkpdf) for vimtex LaTeX compilation.
-- Sound/display: [pulseaudio](https://www.archlinux.org/packages/?name=pulseaudio), [pulseaudio-alsa](https://www.archlinux.org/packages/extra/any/pulseaudio-alsa/), [light](https://github.com/haikarainen/light) to control backlight, [compton](https://github.com/chjj/compton).
-- [wpgtk](https://github.com/deviantfero/wpgtk), [imagemagick](https://github.com/ImageMagick/ImageMagick), [feh](https://www.archlinux.org/packages/extra/x86_64/feh/).
-- Misc: [xcwd](https://github.com/schischi/xcwd), [i3lock-fancy](https://github.com/meskarune/i3lock-fancy) + [i3lock-color](https://github.com/PandorasFox/i3lock-color). 
+- rofi: [rofi-calc](https://github.com/svenstaro/rofi-calc), [rofimoji](https://github.com/fdw/rofimoji).
+- [xorg](https://www.archlinux.org/groups/x86_64/xorg/): [xclip](https://github.com/astrand/xclip), [xorg-xrdb](https://www.archlinux.org/packages/extra/x86_64/xorg-xrdb/), [xorg-xinput](https://www.archlinux.org/packages/extra/x86_64/xorg-xinput/).
+- Compositor: [compton](https://github.com/chjj/compton).
+- Term/vim: [powerline-shell](https://github.com/b-ryan/powerline-shell), [powerline-fonts](https://github.com/powerline/fonts), [vundle](https://github.com/VundleVim/Vundle.vim), [mkpdf](https://github.com/seifferth/mkpdf) for vimtex LaTeX compilation.
+- Sound/display: [pulseaudio](https://www.archlinux.org/packages/?name=pulseaudio), [pulseaudio-alsa](https://www.archlinux.org/packages/extra/any/pulseaudio-alsa/), [light](https://github.com/haikarainen/light) to control backlight.
+- pywal: [wpgtk](https://github.com/deviantfero/wpgtk), [imagemagick](https://github.com/ImageMagick/ImageMagick), [feh](https://www.archlinux.org/packages/extra/x86_64/feh/).
+- Misc: [xcwd](https://github.com/schischi/xcwd), [i3lock-fancy](https://github.com/meskarune/i3lock-fancy) + [i3lock-color](https://github.com/PandorasFox/i3lock-color).
 
 ### Additional
 - Fetch: [aurafetch](https://gitlab.com/LionessAlana/aurafetch), [ufetch](https://gitlab.com/jschx/ufetch).
 - [ranger](https://github.com/ranger/ranger): [w3m](https://www.archlinux.org/packages/extra/x86_64/w3m/), [highlight](https://github.com/tajmone/highlight).
-- Misc: [thunar](https://www.archlinux.org/packages/extra/x86_64/thunar/), [nomacs](https://github.com/nomacs/nomacs), [okular](https://www.archlinux.org/packages/extra/x86_64/okular/), [yad](https://github.com/v1cont/yad).
+- Misc: [thunar](https://www.archlinux.org/packages/extra/x86_64/thunar/), [okular](https://www.archlinux.org/packages/extra/x86_64/okular/), [vlc](https://www.videolan.org/vlc/), [yad](https://github.com/v1cont/yad).
 
 
 ## Managing Dotfiles
