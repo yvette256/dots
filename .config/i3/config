@@ -200,6 +200,9 @@ for_window [class="^.*"] border pixel 3
 gaps inner 15
 gaps outer 0
 
+# Lock screen control
+bindsym $mod+p exec --no-startup-id i3lock-fancy -f Iosevka
+
 # Volume controls
 #bindsym XF86AudioRaiseVolume exec amixer sset Master 3%+
 #bindsym XF86AudioLowerVolume exec amixer sset Master 3%-
