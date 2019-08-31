@@ -15,7 +15,7 @@ get() {
 }
 
 usage() {
-	printf "usage: dict <word>\nrequires curl, grep and sed.\n"
+	printf "usage: dico word\nrequires curl, grep and sed.\n"
 	exit "1"
 }
 

@@ -1,9 +1,20 @@
 #!/bin/sh
 
+usage() {
+    printf "usage: zathura-md [file.md] [-f]\n"
+    exit "1"
+}
+
 if [ -z "$1" ] ; then
+    usage
+elif [ "$1" == "-f" ] ; then
     base=$(fzf)
 else
     base=$1
+fi
+
+if [ "${base##*.}" != "md" ] ; then
+    usage
 fi
 
 file=$(basename -- "$base" .md)
