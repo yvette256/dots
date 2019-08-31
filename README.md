@@ -8,7 +8,7 @@ Use `rice path/to/image.png` to apply wallpaper and generated colorscheme.
 
 ### Primary
 - Shell: [bash](https://www.gnu.org/software/bash/)
-- Terminal emulator: [termite](https://github.com/thestinger/termite)
+- Terminal emulator: [kitty](https://github.com/kovidgoyal/kitty)
 - WM: [i3-gaps](https://github.com/Airblader/i3)  
 - Bar: [polybar](https://github.com/jaagr/polybar)  
 - Launcher: [dmenu-extended](https://github.com/MarkHedleyJones/dmenu-extended) with [rofi](https://github.com/DaveDavenport/rofi)  
