@@ -1,8 +1,14 @@
 #!/bin/sh
 
-file=$(basename -- "$1" .md)
+if [ -z "$1" ] ; then
+    base=$(fzf)
+else
+    base=$1
+fi
 
-md-preview $1
+file=$(basename -- "$base" .md)
+
+md-preview $base
 zathura "/tmp/$file.pdf" &
-echo "$1" | entr sh -c "md-preview $1" &
+echo "$base" | entr sh -c "md-preview $base"
 
