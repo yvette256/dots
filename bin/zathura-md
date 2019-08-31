@@ -1,0 +1,8 @@
+#!/bin/sh
+
+file=$(basename -- "$1" .md)
+
+md-preview $1
+zathura "/tmp/$file.pdf" &
+echo "$1" | entr sh -c "md-preview $1" &
+

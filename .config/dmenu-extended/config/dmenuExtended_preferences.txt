@@ -33,7 +33,7 @@
     "path_shellCommand": "~/.dmenuEextended_shellCommand.sh",
     "prompt": "Open:",
     "scan_hidden_folders": false,
-    "terminal": "xterm",
+    "terminal": "kitty",
     "valid_extensions": [
         "py",
         "svg",

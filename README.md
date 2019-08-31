@@ -26,7 +26,7 @@ Use `rice path/to/image.png` to apply wallpaper and generated colorscheme.
 - Term/vim: [powerline-shell](https://github.com/b-ryan/powerline-shell), [powerline-fonts](https://github.com/powerline/fonts), [vundle](https://github.com/VundleVim/Vundle.vim), [mkpdf](https://github.com/seifferth/mkpdf) for vimtex LaTeX compilation.
 - Sound/display: [pulseaudio](https://www.archlinux.org/packages/?name=pulseaudio), [pulseaudio-alsa](https://www.archlinux.org/packages/extra/any/pulseaudio-alsa/), [light](https://github.com/haikarainen/light) to control backlight.
 - pywal: [wpgtk](https://github.com/deviantfero/wpgtk), [imagemagick](https://github.com/ImageMagick/ImageMagick), [feh](https://www.archlinux.org/packages/extra/x86_64/feh/).
-- Misc: [xcwd](https://github.com/schischi/xcwd), [i3lock-fancy](https://github.com/meskarune/i3lock-fancy) + [i3lock-color](https://github.com/PandorasFox/i3lock-color).
+- Misc: [xcwd](https://github.com/schischi/xcwd), [i3lock-fancy](https://github.com/meskarune/i3lock-fancy) + [i3lock-color](https://github.com/PandorasFox/i3lock-color), [zathura](https://www.archlinux.org/packages/community/x86_64/zathura/).
 
 ### Additional
 - Fetch: [aurafetch](https://gitlab.com/LionessAlana/aurafetch), [ufetch](https://gitlab.com/jschx/ufetch).

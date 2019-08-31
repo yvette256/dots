@@ -1,0 +1,5 @@
+#!/bin/sh
+
+file=$(basename -- "$1" .md)
+pandoc $1 -o /tmp/$file.pdf --variable urlcolor=blue --variable geometry:margin=0.5in
+
