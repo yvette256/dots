@@ -237,10 +237,6 @@ label-muted-foreground = ${colors.my_foreground}
 [module/powermenu]
 type = custom/text
 
-content-prefix = "%{T5}%{T-}"
-content-prefix-background = ${colors.my_background}
-content-prefix-foreground = ${colors.my_color1}
-
 content = "  "
 
 content-background = ${colors.my_color1}
@@ -261,6 +257,12 @@ content-background = ${colors.my_background}
 type = custom/text
 content = "%{T5}%{T-}"
 content-foreground = ${colors.my_background} 
+
+[module/ra]
+type = custom/text
+content = "%{T5}%{T-}"
+content-foreground = ${colors.my_color1}
+content-background = ${colors.my_background}
 
 [module/rb]
 type = custom/text
