@@ -223,8 +223,8 @@ set $term kitty
 bindsym $mod+Return exec $term
 bindsym $mod+Shift+Return exec $term -d "$(xcwd)"
 
-# Select area + copy to clipboard
-bindsym --release $mod+Print exec import png:- | xclip -selection c -t image/png
+# Screenshot select area + copy to clipboard
+bindsym --release $mod+Print exec --no-startup-id import png:- | xclip -selection c -t image/png
 
 # rofi
 bindsym $mod+c exec rofi -show window
