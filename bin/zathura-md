@@ -1,7 +1,7 @@
 #!/bin/sh
 
 usage() {
-    printf "usage: zathura-md [file.md] [-f]\n"
+    printf "usage: zathura-md [file.md] [-f]\nrequires zathura, pandoc, entr, fzf.\n"
     exit "1"
 }
 
