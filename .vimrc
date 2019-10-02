@@ -110,6 +110,10 @@ function! BracketBS()
         return "\<Right>\<BS>\<BS>"
     elseif left == "\'" && right == "\'"
         return "\<Right>\<BS>\<BS>"
+    elseif left == "<" && right == ">"
+        return "\<Right>\<BS>\<BS>"
+    elseif left == "$" && right == "$"
+        return "\<Right>\<BS>\<BS>"
     else
         return "\<BS>"
     endif
@@ -119,6 +123,9 @@ inoremap <expr> <BS> BracketBS()
 
 " C comments
 inoremap /*<Space> /*<Space><Space>*/<Left><Left><Left>
+
+" Jinja
+inoremap {%<Space> {%<Space><Space>%}<Left><Left><Left>
 
 " Copy to clipboard
 vnoremap <C-c> "+y
