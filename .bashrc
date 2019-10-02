@@ -19,10 +19,6 @@ rice() {
     wal-set
 }
 
-matlab-run() {
-    matlab -nodisplay -nosplash -nodesktop -r "run('$@');exit;" | tail -n +11
-}
-
 # Set powerline shell prompt
 function _update_ps1() {
     PS1=$(powerline-shell $?)
