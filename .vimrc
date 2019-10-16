@@ -46,6 +46,8 @@ set incsearch
 set ignorecase
 set smartcase
 
+set rnu
+
 inoremap kj <Esc>
 cnoremap kj <C-c>
 

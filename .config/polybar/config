@@ -23,7 +23,7 @@ my_color25	= ${xrdb:color15}
 
 [bar/main_bar]
 ;monitor = ${env:MONITOR:HDMI-1}
-monitor = ${env:MONITOR:eDP-1}
+monitor = ${env:MONITOR:eDP1}
 bottom = false
 width = 100%
 height = 20
