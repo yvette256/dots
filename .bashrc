@@ -6,7 +6,7 @@
 [[ $- != *i* ]] && return
 
 # Add my bin to path
-export PATH="$PATH:/home/yvette/bin:/home/yvette/.gem/ruby/2.5.0/bin"
+export PATH="$PATH:/home/yvette/bin:/home/yvette/.gem/ruby/2.5.0/bin:/home/yvette/.local/bin"
 
 # Set my aliases
 alias ls='ls --color=auto'
@@ -35,4 +35,7 @@ fi
 
 # Add support for TTYs
 source ~/.cache/wal/colors-tty.sh
+
+# opam Configuration
+test -r /home/yvette/.opam/opam-init/init.sh && . /home/yvette/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
 

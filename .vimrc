@@ -17,6 +17,7 @@ Plugin 'tpope/vim-commentary'
 Plugin 'dense-analysis/ale'
 Plugin 'vim-jp/vim-cpp'
 Plugin 'octol/vim-cpp-enhanced-highlight'
+Plugin 'altercation/vim-colors-solarized.git'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -95,7 +96,6 @@ inoremap <expr> >  strpart(getline('.'), col('.')-1, 1) == ">" ? "\<Right>" : ">
 inoremap <expr> "  strpart(getline('.'), col('.')-1, 1) == "\"" ? "\<Right>" : "\"\"\<Left>"
 
 inoremap <> <><Left>
-inoremap `` ``<Left>
 
 function! BracketBS()
     let line = getline('.')
@@ -126,6 +126,9 @@ inoremap <expr> <BS> BracketBS()
 " C comments
 inoremap /*<Space> /*<Space><Space>*/<Left><Left><Left>
 
+" OCaml comments
+inoremap (*<Space> (*<Space><Space>*)<Left><Left><Left>
+
 " Jinja
 inoremap {%<Space> {%<Space><Space>%}<Left><Left><Left>
 
@@ -147,4 +150,3 @@ let g:ale_set_signs = 0
 let g:cpp_class_scope_highlight = 1
 let g:cpp_member_variable_highlight = 1
 let g:cpp_class_decl_highlight = 1
-

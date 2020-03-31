@@ -99,7 +99,7 @@ bindsym $mod+a focus parent
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1:chat"
 set $ws2 "2:web"
-set $ws3 "3:term"
+set $ws3 "3"
 set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
@@ -187,8 +187,8 @@ exec --no-startup-id nm-applet
 # Launch polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
-# Start compton
-exec --no-startup-id compton -b
+# Start picom
+exec --no-startup-id picom -b
 
 # Run dunst with color theme
 exec --no-startup-id $HOME/bin/wal-set
