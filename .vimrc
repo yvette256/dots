@@ -8,15 +8,35 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
+
 Plugin 'lervag/vimtex'
+let g:tex_flavor = 'latex'
+
 Plugin 'Valloric/YouCompleteMe'
+let g:ycm_key_list_stop_completion = ['<C-y>', '<CR>']
+let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_autoclose_preview_window_after_completion = 1
+
 Plugin 'vim-airline/vim-airline'
+let g:airline_powerline_fonts = 1
+let g:airline_solarized_bg='dark'
 Plugin 'vim-airline/vim-airline-themes'
+
 Plugin 'vim-python/python-syntax'
+let g:python_highlight_all = 1
+let g:python_highlight_space_errors = 0
+
 Plugin 'tpope/vim-commentary'
+
 Plugin 'dense-analysis/ale'
+let g:ale_set_signs = 0
+
 Plugin 'vim-jp/vim-cpp'
+let g:cpp_class_scope_highlight = 1
+let g:cpp_member_variable_highlight = 1
+let g:cpp_class_decl_highlight = 1
 Plugin 'octol/vim-cpp-enhanced-highlight'
+
 Plugin 'altercation/vim-colors-solarized.git'
 
 call vundle#end()            " required
@@ -48,6 +68,9 @@ set ignorecase
 set smartcase
 
 set rnu
+
+set splitbelow
+set splitright
 
 inoremap kj <Esc>
 cnoremap kj <C-c>
@@ -123,6 +146,15 @@ endf
 
 inoremap <expr> <BS> BracketBS()
 
+" Copy to clipboard
+vnoremap <C-c> "+y
+
+" Easier splits
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+
 " C comments
 inoremap /*<Space> /*<Space><Space>*/<Left><Left><Left>
 
@@ -132,21 +164,4 @@ inoremap (*<Space> (*<Space><Space>*)<Left><Left><Left>
 " Jinja
 inoremap {%<Space> {%<Space><Space>%}<Left><Left><Left>
 
-" Copy to clipboard
-vnoremap <C-c> "+y
-
 autocmd FileType matlab setlocal commentstring=%\ %s
-
-" Plugin settings
-let g:ycm_key_list_stop_completion = ['<C-y>', '<CR>']
-let g:ycm_autoclose_preview_window_after_insertion = 1
-let g:ycm_autoclose_preview_window_after_completion = 1
-let g:tex_flavor = 'latex'
-let g:airline_powerline_fonts = 1
-let g:airline_solarized_bg='dark'
-let g:python_highlight_all = 1
-let g:python_highlight_space_errors = 0
-let g:ale_set_signs = 0
-let g:cpp_class_scope_highlight = 1
-let g:cpp_member_variable_highlight = 1
-let g:cpp_class_decl_highlight = 1
