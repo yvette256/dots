@@ -22,7 +22,9 @@ let g:airline_powerline_fonts = 1
 let g:airline_solarized_bg='dark'
 Plugin 'vim-airline/vim-airline-themes'
 
-Plugin 'vim-python/python-syntax'
+Plugin 'bling/vim-bufferline'
+
+Plugin 'vim-pythonpython-syntax'
 let g:python_highlight_all = 1
 let g:python_highlight_space_errors = 0
 
@@ -49,6 +51,8 @@ filetype plugin indent on    " required
 " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
 
 " My Settings
+
+let mapleader = "\<Space>"
 
 set number
 syntax on
@@ -155,13 +159,16 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
-" C comments
+" Cycle through buffers
+nnoremap <C-n> :bnext<CR>
+nnoremap <C-p> :bprevious<CR>
+
+" Clear search highlight
+nnoremap <silent> \ :noh<CR><ESC>
+
+" Language-specific comments
 inoremap /*<Space> /*<Space><Space>*/<Left><Left><Left>
-
-" OCaml comments
 inoremap (*<Space> (*<Space><Space>*)<Left><Left><Left>
-
-" Jinja
 inoremap {%<Space> {%<Space><Space>%}<Left><Left><Left>
 
 autocmd FileType matlab setlocal commentstring=%\ %s
