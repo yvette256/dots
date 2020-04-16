@@ -23,6 +23,8 @@ Plugin 'vim-python/python-syntax'
 Plugin 'vim-jp/vim-cpp'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 
+Plugin 'SirVer/ultisnips'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -179,3 +181,8 @@ let g:ale_set_signs = 0
 let g:cpp_class_scope_highlight = 1
 let g:cpp_member_variable_highlight = 1
 let g:cpp_class_decl_highlight = 1
+
+" UltiSnips
+let g:UltiSnipsExpandTrigger="<leader><tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
