@@ -183,6 +183,6 @@ let g:cpp_member_variable_highlight = 1
 let g:cpp_class_decl_highlight = 1
 
 " UltiSnips
-let g:UltiSnipsExpandTrigger=",<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsExpandTrigger=";<tab>"
+let g:UltiSnipsJumpForwardTrigger=";<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
