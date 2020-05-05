@@ -1,0 +1,11 @@
+inoremap kj <Esc>
+cnoremap kj <C-c>
+
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+
+set rnu
+
+nnoremap <silent> \ :noh<CR><ESC>
