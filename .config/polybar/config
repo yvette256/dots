@@ -48,15 +48,15 @@ padding-right = 0
 module-margin-left = 0
 module-margin-right = 0
 
-font-1 = Font Awesome 5 Free:style=Regular:size=9;1
-font-2 = Font Awesome 5 Free:style=Solid:size=9;1
+font-2 = Font Awesome 5 Free:style=Regular:size=9;1
+font-1 = Font Awesome 5 Free:style=Solid:size=9;1
 font-0 = Iosevka:size=11:fontformat=truetype:pixelsize=11:antialias=true;1
 font-3 = DejaVu Sans:style=Bold:size=11;1
 font-4 = Iosevka:size=12:fontformat=truetype:antialias=true;1
 
 modules-left = i3 xwindow lb
 modules-center = 
-modules-right = rc date rb keyboard volume wireless-network battery powermenu
+modules-right = rd date-min keyboard volume wireless-network battery powermenu
 
 tray-position = 
 tray-padding = 9
@@ -118,6 +118,23 @@ format-underline = ${colors.my_color1}
 label = " %date%  %time% "
 label-background = ${colors.my_color1}
 label-foreground = ${colors.my_background}
+
+[module/date-min]
+type = internal/date
+interval = 1
+
+date-alt = "%a. %b %d"
+date = "%a. %d"
+
+time-alt = "%I:%M:%S %p"
+time = "%I:%M"
+
+format-prefix-foreground = ${colors.my_color1}
+
+label = "  %date%   %time% "
+label-background = ${colors.my_background}
+label-foreground = ${colors.my_foreground}
+
 
 [module/battery]
 type = internal/battery
@@ -274,5 +291,10 @@ content-background = ${colors.my_color1}
 type = custom/text
 content = "%{T5}%{T-}"
 content-foreground = ${colors.my_color1} 
+
+[module/rd]
+type = custom/text
+content = "%{T5}%{T-}"
+content-foreground = ${colors.my_background}
 
 ; vim:ft=dosini
