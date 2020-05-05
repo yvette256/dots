@@ -1,6 +1,5 @@
 ! ~/.Xresources
 
-
 *background:            #272827
 *foreground:            #657b83
 *fading:                15
@@ -45,3 +44,8 @@
 ! white
 *.color7:       #bfbfbf
 *.color15:      #bfbfbf
+
+
+! URxvt settings
+URxvt.scrollBar: false
+URxvt.font: xft:Inconsolata Regular:autohint=true:size=10
