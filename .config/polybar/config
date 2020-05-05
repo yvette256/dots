@@ -56,7 +56,7 @@ font-4 = Iosevka:size=12:fontformat=truetype:antialias=true;1
 
 modules-left = i3 xwindow lb
 modules-center = 
-modules-right = rd date-min keyboard volume wireless-network battery powermenu
+modules-right = rc date rb keyboard volume wireless-network battery powermenu
 
 tray-position = 
 tray-padding = 9

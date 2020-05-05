@@ -60,6 +60,9 @@ set rnu
 set splitbelow
 set splitright
 
+set breakindent
+set linebreak
+
 inoremap kj <Esc>
 cnoremap kj <C-c>
 
