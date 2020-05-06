@@ -39,6 +39,7 @@ filetype plugin indent on    " required
 let mapleader = "\<Space>"
 
 set number
+set rnu
 syntax on
 set autoindent
 set smartindent
@@ -55,8 +56,7 @@ set incsearch
 set ignorecase
 set smartcase
 
-set rnu
-
+set hidden
 set splitbelow
 set splitright
 
