@@ -8,4 +8,6 @@ set smartcase
 
 set rnu
 
+set commentary
+
 nnoremap <silent> \ :noh<CR><ESC>
