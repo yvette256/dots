@@ -48,11 +48,11 @@ padding-right = 0
 module-margin-left = 0
 module-margin-right = 0
 
-font-2 = Font Awesome 5 Free:style=Regular:size=9;1
-font-1 = Font Awesome 5 Free:style=Solid:size=9;1
-font-0 = Iosevka:size=11:fontformat=truetype:pixelsize=11:antialias=true;1
-font-3 = DejaVu Sans:style=Bold:size=11;1
-font-4 = Iosevka:size=12:fontformat=truetype:antialias=true;1
+font-2 = Font Awesome 5 Free:style=Regular:size=9;2
+font-1 = Font Awesome 5 Free:style=Solid:size=9;2
+font-0 = Iosevka:size=11:fontformat=truetype:pixelsize=11:antialias=true;3
+font-3 = DejaVu Sans:style=Bold:size=11;3
+font-4 = Iosevka:size=12:fontformat=truetype:antialias=true;3
 
 modules-left = i3 xwindow lb
 modules-center = 
@@ -113,7 +113,7 @@ time-alt = "%I:%M:%S %p"
 time = "%I:%M"
 
 format-prefix-foreground = ${colors.my_foreground}
-format-underline = ${colors.my_color1}
+; format-underline = ${colors.my_color1}
 
 label = " %date%  %time% "
 label-background = ${colors.my_color1}
