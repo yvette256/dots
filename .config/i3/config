@@ -229,7 +229,7 @@ bindsym $mod+Shift+Return exec $term -d "$(xcwd)"
 bindsym --release $mod+Print exec --no-startup-id import png:- | xclip -selection c -t image/png
 
 # rofi
-bindsym $mod+c exec rofi -show window
+bindsym $mod+c exec rofi -show calc
 bindsym $mod+m exec rofimoji
 
 # Set colors from resource
