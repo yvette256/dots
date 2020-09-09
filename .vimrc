@@ -159,6 +159,10 @@ inoremap {%<Space> {%<Space><Space>%}<Left><Left><Left>
 
 autocmd FileType matlab setlocal commentstring=%\ %s
 
+" Delete to black hole register
+nnoremap <leader>d "_d
+xnoremap <leader>d "_d
+
 " Plugin settings
 
 " vimtex

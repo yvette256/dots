@@ -11,3 +11,6 @@ set rnu
 set commentary
 
 nnoremap <silent> \ :noh<CR><ESC>
+
+nnoremap <leader>d "_d
+xnoremap <leader>d "_d
