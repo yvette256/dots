@@ -14,12 +14,13 @@ my_color6	= ${xrdb:color6}
 my_color7	= ${xrdb:color7}
 my_color8	= ${xrdb:color8}
 my_color9	= ${xrdb:color9}
-my_color20	= ${xrdb:color10}
-my_color21	= ${xrdb:color11}
-my_color22	= ${xrdb:color12}
-my_color23	= ${xrdb:color13}
-my_color24	= ${xrdb:color14}
-my_color25	= ${xrdb:color15}
+my_color10	= ${xrdb:color10}
+my_color11	= ${xrdb:color11}
+my_color12	= ${xrdb:color12}
+my_color13	= ${xrdb:color13}
+my_color14	= ${xrdb:color14}
+my_color15	= ${xrdb:color15}
+my_icon_color = ${self.my_color2}
 
 [bar/main_bar]
 ;monitor = ${env:MONITOR:HDMI-1}
@@ -56,7 +57,7 @@ font-4 = Iosevka:size=12:fontformat=truetype:antialias=true;2
 
 modules-left = i3 xwindow lb
 modules-center = 
-modules-right = rc date rb keyboard volume wireless-network battery powermenu
+modules-right = rc time-high rb keyboard date-min volume wireless-network battery
 
 tray-position = 
 tray-padding = 9
@@ -102,7 +103,7 @@ label-urgent-background = ${colors.my_color2}
 label-urgent-underline = ${colors.my_color2}
 label-urgent-padding = 1
 
-[module/date]
+[module/datetime]
 type = internal/date
 interval = 1
 
@@ -112,12 +113,25 @@ date = "%a. %d"
 time-alt = "%I:%M:%S %p"
 time = "%I:%M"
 
-format-prefix-foreground = ${colors.my_foreground}
 ; format-underline = ${colors.my_color1}
 
 label = " %date%  %time% "
 label-background = ${colors.my_color1}
 label-foreground = ${colors.my_background}
+
+[module/datetime-min]
+type = internal/date
+interval = 1
+
+date-alt = "%a. %b %d"
+date = "%a. %d"
+
+time-alt = "%I:%M:%S %p"
+time = "%I:%M"
+
+label = "  %date%   %time% "
+label-background = ${colors.my_background}
+label-foreground = ${colors.my_foreground}
 
 [module/date-min]
 type = internal/date
@@ -126,14 +140,27 @@ interval = 1
 date-alt = "%a. %b %d"
 date = "%a. %d"
 
+label = "%date% "
+label-background = ${colors.my_background}
+label-foreground = ${colors.my_foreground}
+
+format-prefix = "  "
+format-prefix-background = ${colors.my_background}
+format-prefix-foreground = ${colors.my_icon_color}
+
+format-background = ${colors.my_background}
+format-foreground = ${colors.my_foreground}
+
+[module/time-high]
+type = internal/date
+interval = 1
+
 time-alt = "%I:%M:%S %p"
 time = "%I:%M"
 
-format-prefix-foreground = ${colors.my_color1}
-
-label = "  %date%   %time% "
-label-background = ${colors.my_background}
-label-foreground = ${colors.my_foreground}
+label = " %time% "
+label-background = ${colors.my_color1}
+label-foreground = ${colors.my_background}
 
 
 [module/battery]
@@ -149,19 +176,20 @@ label-discharging = %percentage%% (%time%)
 label-full = %percentage%%
 
 format-charging-background = ${colors.my_background}
-format-charging = " <label-charging>"
+format-charging-prefix = " "
+format-charging-prefix-foreground = ${colors.my_icon_color}
 format-charging-underline = ${colors.my_background}
 format-charging-padding = 1
 
 format-discharging-background = ${colors.my_background}
 format-discharging = "<ramp-capacity> <label-discharging>"
-format-discharging-padding = 1
+format-discharging-padding = ${self.format-charging-padding}
 format-discharging-underline = ${self.format-charging-underline}
 
 format-full-background = ${colors.my_background}
-format-full-prefix-foreground = ${colors.my_background}
-format-full = " <label-full>"
-format-full-padding = ${self.format-discharging-padding}
+format-full-prefix = " "
+format-full-prefix-foreground = ${self.format-charging-prefix-foreground}
+format-full-padding = ${self.format-charging-padding}
 format-full-underline = ${self.format-charging-underline}
 
 ;format-charging-background = ${colors.my_background}
@@ -205,10 +233,10 @@ type = internal/xkeyboard
 format = <label-indicator>
 format-spacing = 0
 
-label-indicator = %name%
-label-indicator-padding = 1
-label-indicator-background = ${colors.my_background}
-label-indicator-foreground = ${colors.my_color2}
+label-indicator-on = %name%
+label-indicator-on-padding = 1
+label-indicator-on-background = ${colors.my_background}
+label-indicator-on-foreground = ${colors.my_color2}
 
 [module/wireless-network]
 type = internal/network
@@ -219,12 +247,14 @@ udspeed-minwidth = 3
 accumulate-stats = false
 unknown-as-up = false
 
-format-connected = " <label-connected>"
+format-connected-prefix = " "
+format-connected-prefix-foreground = ${colors.my_icon_color}
 format-connected-padding = 1
 format-connected-underline = ${colors.my_background}
 format-connected-background = ${colors.my_background}
 
-format-disconnected = " <label-disconnected>"
+format-disconnected-prefix = " "
+format-disconnected-prefix-foreground = ${self.format-connected-prefix-foreground}
 format-disconnected-padding = ${self.format-connected-padding}
 format-disconnected-underline = ${self.format-connected-underline}
 format-disconnected-background = ${self.format-connected-background}
@@ -238,12 +268,14 @@ label-disconnected-foreground = ${colors.my_foreground}
 [module/volume]
 type = internal/pulseaudio
 
-format-volume = "  <label-volume>"
+format-volume-prefix = " "
+format-volume-prefix-foreground = ${colors.my_icon_color}
 format-volume-padding = 1
 format-volume-underline = ${colors.my_background}
 format-volume-background = ${colors.my_background}
 
-format-muted = " <label-muted>"
+format-muted-prefix = " "
+format-muted-prefix-foreground = ${self.format-volume-prefix-foreground}
 format-muted-padding = ${self.format-volume-padding}
 format-muted-underline = ${self.format-volume-underline}
 format-muted-background= ${self.format-volume-background}
