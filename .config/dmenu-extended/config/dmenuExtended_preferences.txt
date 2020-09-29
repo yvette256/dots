@@ -63,7 +63,8 @@
         "html",
         "sublime-project",
         "mp4",
-        "mkv"
+        "mkv",
+        "epub"
     ],
     "watch_folders": [
         "~/"
