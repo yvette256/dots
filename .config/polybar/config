@@ -144,7 +144,8 @@ label = "%date% "
 label-background = ${colors.my_background}
 label-foreground = ${colors.my_foreground}
 
-format-prefix = "  "
+; format-prefix = "  "
+format-prefix = " "
 format-prefix-background = ${colors.my_background}
 format-prefix-foreground = ${colors.my_icon_color}
 
