@@ -178,8 +178,8 @@ bindsym $mod+r mode "resize"
 #exec --no-startup-id feh --bg-fill ~/Pictures/city.jpg
 exec --no-startup-id wal -R
 
-# Set touchpad tap-to-click on
-#exec xinput set-prop 17 311 1
+# Enable laptop touchpad tapping
+exec --no-startup-id xinput set-prop "MSFT0001:00 06CB:73FD Touchpad" "libinput Tapping Enabled" 1
 
 # Start nm-applet
 exec --no-startup-id nm-applet
@@ -191,7 +191,7 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id picom -b
 
 # Run dunst with color theme
-exec --no-startup-id $HOME/bin/wal-set
+# exec --no-startup-id $HOME/bin/wal-set
 
 # Disable titlebars
 for_window [class="^.*"] border pixel 3
