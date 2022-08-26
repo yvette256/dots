@@ -231,8 +231,8 @@ bindsym --release $mod+Print exec --no-startup-id import png:- | xclip -selectio
 bindsym $mod+Shift+Print exec --no-startup-id scrot ~/pictures/screenshots/%F-%H%M%S_scrot.png
 
 # rofi
-bindsym $mod+c exec rofi -show calc
-bindsym $mod+m exec rofimoji
+bindsym $mod+c exec rofi -modi calc -show calc -theme ~/.cache/wal/colors-rofi-dark-mod.rasi
+bindsym $mod+m exec rofi -modi emoji -show emoji -theme ~/.cache/wal/colors-rofi-dark-mod.rasi
 
 # Set colors from resource
 set_from_resource	$backgr 	background
