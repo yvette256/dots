@@ -20,7 +20,7 @@ Use `rice path/to/image.png` to apply wallpaper and generated colorscheme.
 - Network: [NetworkManager](https://www.archlinux.org/packages/extra/x86_64/networkmanager/), [nm-applet](https://www.archlinux.org/packages/extra/x86_64/network-manager-applet/).
 - Fonts: [FontAwesome](https://aur.archlinux.org/packages/ttf-font-awesome/), [Inconsolata](https://www.archlinux.org/packages/community/any/ttf-inconsolata/), [DejaVu](https://www.archlinux.org/packages/extra/any/ttf-dejavu/), [Iosevka](https://github.com/be5invis/Iosevka).
 - GTK: [Adwaita (cursor)](https://www.archlinux.org/packages/?name=gnome-themes-extra), [deepin-dark (icon)](https://www.archlinux.org/packages/community/any/deepin-icon-theme/).
-- rofi: [rofi-calc](https://github.com/svenstaro/rofi-calc), [rofimoji](https://github.com/fdw/rofimoji).
+- rofi: [rofi-calc](https://github.com/svenstaro/rofi-calc), [rofi-emoji](https://github.com/Mange/rofi-emoji).
 - [xorg](https://www.archlinux.org/groups/x86_64/xorg/): [xclip](https://github.com/astrand/xclip), [xorg-xrdb](https://www.archlinux.org/packages/extra/x86_64/xorg-xrdb/), [xorg-xinput](https://www.archlinux.org/packages/extra/x86_64/xorg-xinput/).
 - Compositor: [compton](https://github.com/chjj/compton).
 - Term/vim: [powerline-shell](https://github.com/b-ryan/powerline-shell), [powerline-fonts](https://github.com/powerline/fonts), [vundle](https://github.com/VundleVim/Vundle.vim), [mkpdf](https://github.com/seifferth/mkpdf) for vimtex LaTeX compilation.
