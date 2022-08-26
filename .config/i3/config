@@ -229,6 +229,8 @@ bindsym $mod+Shift+Return exec $term -d "$(xcwd)"
 bindsym --release $mod+Print exec --no-startup-id import png:- | xclip -selection c -t image/png
 # Screenshot whole screen + save
 bindsym $mod+Shift+Print exec --no-startup-id scrot ~/pictures/screenshots/%F-%H%M%S_scrot.png
+# Screenshot whole screen + copy to clipboard
+bindsym Control+Print exec --no-startup-id scrot - | xclip -selection c -t image/png
 
 # rofi
 bindsym $mod+c exec rofi -modi calc -show calc -theme ~/.cache/wal/colors-rofi-dark-mod.rasi
