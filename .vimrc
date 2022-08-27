@@ -17,6 +17,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'bling/vim-bufferline'
 Plugin 'altercation/vim-colors-solarized.git'
+Plugin 'deviantfero/wpgtk.vim'
 
 Plugin 'lervag/vimtex'
 Plugin 'vim-python/python-syntax'
@@ -37,6 +38,8 @@ filetype plugin indent on    " required
 " My Settings
 
 let mapleader = "\<Space>"
+
+colorscheme wpgtkAlt
 
 set number
 set rnu
@@ -175,7 +178,7 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 
 " airline
 let g:airline_powerline_fonts = 1
-let g:airline_solarized_bg='dark'
+let g:airline_theme='wpgtk'
 
 " python-syntax
 let g:python_highlight_all = 1
