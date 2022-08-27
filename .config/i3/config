@@ -192,6 +192,8 @@ exec --no-startup-id picom -b
 
 # Run dunst with color theme
 # exec --no-startup-id $HOME/bin/wal-set
+# Control dunst
+bindsym Control+space exec --no-startup-id dunstctl close-all
 
 # Disable titlebars
 for_window [class="^.*"] border pixel 3
