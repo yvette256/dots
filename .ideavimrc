@@ -1,3 +1,5 @@
+let mapleader = "\<Space>"
+
 inoremap kj <Esc>
 cnoremap kj <C-c>
 
