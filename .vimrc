@@ -37,9 +37,9 @@ filetype plugin indent on    " required
 
 " My Settings
 
-let mapleader = "\<Space>"
-
 colorscheme wpgtkAlt
+
+let mapleader = "\<Space>"
 
 set number
 set rnu
