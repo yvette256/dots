@@ -165,6 +165,8 @@ autocmd FileType matlab setlocal commentstring=%\ %s
 " Delete to black hole register
 nnoremap <leader>d "_d
 xnoremap <leader>d "_d
+nnoremap <leader>D "_D
+xnoremap <leader>D "_D
 
 " Plugin settings
 
