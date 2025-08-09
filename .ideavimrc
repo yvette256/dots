@@ -16,3 +16,5 @@ nnoremap <silent> \ :noh<CR><ESC>
 
 nnoremap <leader>d "_d
 xnoremap <leader>d "_d
+nnoremap <leader>D "_D
+xnoremap <leader>D "_D
